@@ -1,6 +1,19 @@
 {
-  "generatedAt": null,
-  "channels": {},
+  "generatedAt": "2026-09-18T08:10:03.181Z",
+  "channels": {
+    "google": {
+      "name": "Google Ads",
+      "spend": 0,
+      "dailyBudget": 0,
+      "leads": 0
+    },
+    "meta": {
+      "name": "Meta Ads",
+      "spend": 0,
+      "dailyBudget": 0,
+      "leads": 0
+    }
+  },
   "crm": {
     "totalDeals": 0,
     "totalQualified": 0,
