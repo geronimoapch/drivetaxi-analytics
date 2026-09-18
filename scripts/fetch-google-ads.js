@@ -58,7 +58,7 @@ async function fetchCampaignStats(accessToken) {
       AND campaign.status != 'REMOVED'
   `;
 
-  const url = `https://googleads.googleapis.com/v17/customers/${GOOGLE_ADS_CUSTOMER_ID}/googleAds:search`;
+  const url = `https://googleads.googleapis.com/v24/customers/${GOOGLE_ADS_CUSTOMER_ID}/googleAds:search`;
   const headers = {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${accessToken}`,
