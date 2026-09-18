@@ -1,4 +1,205 @@
 {
-  "rows": [],
-  "skipped": true
+  "rows": [
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-19",
+      "spendTenge": 17.61,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-19",
+      "spendTenge": 10.03,
+      "leads": 2,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-19",
+      "spendTenge": 20.06,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-20",
+      "spendTenge": 42.67,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-20",
+      "spendTenge": 8.7,
+      "leads": 3,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-20",
+      "spendTenge": 9.89,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-21",
+      "spendTenge": 30.76,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-21",
+      "spendTenge": 2.58,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-21",
+      "spendTenge": 9.53,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-22",
+      "spendTenge": 26.74,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-22",
+      "spendTenge": 8.55,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-23",
+      "spendTenge": 22.08,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-23",
+      "spendTenge": 10.01,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-24",
+      "spendTenge": 43.41,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-24",
+      "spendTenge": 5.17,
+      "leads": 2,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-24",
+      "spendTenge": 11.7,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-25",
+      "spendTenge": 63.98,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-25",
+      "spendTenge": 10.16,
+      "leads": 3,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-25",
+      "spendTenge": 12.28,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-26",
+      "spendTenge": 47.96,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-26",
+      "spendTenge": 9.39,
+      "leads": 5,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-26",
+      "spendTenge": 8.97,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-27",
+      "spendTenge": 50.45,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-27",
+      "spendTenge": 5.59,
+      "leads": 2,
+      "dailyBudgetTenge": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-27",
+      "spendTenge": 9.93,
+      "leads": 0,
+      "dailyBudgetTenge": 0
+    }
+  ],
+  "skipped": false
 }
