@@ -1,4 +1,445 @@
 {
-  "rows": [],
-  "skipped": true
+  "rows": [
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-02",
+      "costTenge": 16.262884,
+      "conversions": 4,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-03",
+      "costTenge": 20.171948,
+      "conversions": 3,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-04",
+      "costTenge": 14.028242,
+      "conversions": 2,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-05",
+      "costTenge": 14.728306,
+      "conversions": 0,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-07",
+      "costTenge": 67.640949,
+      "conversions": 4,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-08",
+      "costTenge": 19.967614,
+      "conversions": 6,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-09",
+      "costTenge": 20.595842,
+      "conversions": 7,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-10",
+      "costTenge": 21.489922,
+      "conversions": 4,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-11",
+      "costTenge": 22.029975,
+      "conversions": 3.15,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-12",
+      "costTenge": 22.924809,
+      "conversions": 4.6,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-13",
+      "costTenge": 21.393181,
+      "conversions": 4.5,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-14",
+      "costTenge": 40.537524,
+      "conversions": 4.75,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-15",
+      "costTenge": 40.490271,
+      "conversions": 2.75,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-16",
+      "costTenge": 41.256314,
+      "conversions": 1,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-17",
+      "costTenge": 40.94,
+      "conversions": 5,
+      "dailyBudgetTenge": 40
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-02",
+      "costTenge": 8.599319,
+      "conversions": 1,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-03",
+      "costTenge": 6.266337,
+      "conversions": 1,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-04",
+      "costTenge": 19.96805,
+      "conversions": 1,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-07",
+      "costTenge": 19.995862,
+      "conversions": 2,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-08",
+      "costTenge": 20,
+      "conversions": 2,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-09",
+      "costTenge": 18.22,
+      "conversions": 1,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-10",
+      "costTenge": 11.39,
+      "conversions": 1,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Drive Taxi | Подключашка | KZ",
+      "date": "2026-09-11",
+      "costTenge": 10.26,
+      "conversions": 0,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24228605411",
+      "campaignName": "Еда - Квиз",
+      "date": "2026-09-08",
+      "costTenge": 6.08,
+      "conversions": 2,
+      "dailyBudgetTenge": 20
+    },
+    {
+      "campaignId": "24228605411",
+      "campaignName": "Еда - Квиз",
+      "date": "2026-09-09",
+      "costTenge": 14.9,
+      "conversions": 5,
+      "dailyBudgetTenge": 20
+    },
+    {
+      "campaignId": "24228605411",
+      "campaignName": "Еда - Квиз",
+      "date": "2026-09-10",
+      "costTenge": 10.333674,
+      "conversions": 4,
+      "dailyBudgetTenge": 20
+    },
+    {
+      "campaignId": "24228605411",
+      "campaignName": "Еда - Квиз",
+      "date": "2026-09-11",
+      "costTenge": 9.7,
+      "conversions": 9,
+      "dailyBudgetTenge": 20
+    },
+    {
+      "campaignId": "24228605411",
+      "campaignName": "Еда - Квиз",
+      "date": "2026-09-14",
+      "costTenge": 14.04,
+      "conversions": 8,
+      "dailyBudgetTenge": 20
+    },
+    {
+      "campaignId": "24228605411",
+      "campaignName": "Еда - Квиз",
+      "date": "2026-09-15",
+      "costTenge": 15.5,
+      "conversions": 9,
+      "dailyBudgetTenge": 20
+    },
+    {
+      "campaignId": "24240476138",
+      "campaignName": "Подключашка | Одноблочник",
+      "date": "2026-09-11",
+      "costTenge": 8.465275,
+      "conversions": 0.25,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24240476138",
+      "campaignName": "Подключашка | Одноблочник",
+      "date": "2026-09-14",
+      "costTenge": 12.48,
+      "conversions": 0,
+      "dailyBudgetTenge": 10
+    },
+    {
+      "campaignId": "24247628106",
+      "campaignName": "Инвест - Алматы",
+      "date": "2026-09-15",
+      "costTenge": 0.78,
+      "conversions": 1,
+      "dailyBudgetTenge": 5
+    },
+    {
+      "campaignId": "24250427483",
+      "campaignName": "Подключашка | Алматы",
+      "date": "2026-09-15",
+      "costTenge": 13.82,
+      "conversions": 0,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427483",
+      "campaignName": "Подключашка | Алматы",
+      "date": "2026-09-16",
+      "costTenge": 1.63,
+      "conversions": 0,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427483",
+      "campaignName": "Подключашка | Алматы",
+      "date": "2026-09-17",
+      "costTenge": 2.92,
+      "conversions": 0,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427486",
+      "campaignName": "Подключашка | Астана",
+      "date": "2026-09-15",
+      "costTenge": 11.13,
+      "conversions": 1,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427486",
+      "campaignName": "Подключашка | Астана",
+      "date": "2026-09-16",
+      "costTenge": 2.37,
+      "conversions": 0,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427486",
+      "campaignName": "Подключашка | Астана",
+      "date": "2026-09-17",
+      "costTenge": 3.58,
+      "conversions": 1,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427489",
+      "campaignName": "Подключашка | Шымкент",
+      "date": "2026-09-15",
+      "costTenge": 4.45,
+      "conversions": 0,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427489",
+      "campaignName": "Подключашка | Шымкент",
+      "date": "2026-09-16",
+      "costTenge": 0.78,
+      "conversions": 0,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427489",
+      "campaignName": "Подключашка | Шымкент",
+      "date": "2026-09-17",
+      "costTenge": 0.72,
+      "conversions": 0,
+      "dailyBudgetTenge": 7
+    },
+    {
+      "campaignId": "24250427492",
+      "campaignName": "Подключашка | Атырау",
+      "date": "2026-09-15",
+      "costTenge": 0.38,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427492",
+      "campaignName": "Подключашка | Атырау",
+      "date": "2026-09-16",
+      "costTenge": 1.17,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427495",
+      "campaignName": "Подключашка | Костанай",
+      "date": "2026-09-15",
+      "costTenge": 0.33,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427495",
+      "campaignName": "Подключашка | Костанай",
+      "date": "2026-09-16",
+      "costTenge": 0.66,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427495",
+      "campaignName": "Подключашка | Костанай",
+      "date": "2026-09-17",
+      "costTenge": 0.8,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427501",
+      "campaignName": "Подключашка | Павлодар",
+      "date": "2026-09-15",
+      "costTenge": 0.4,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427501",
+      "campaignName": "Подключашка | Павлодар",
+      "date": "2026-09-16",
+      "costTenge": 0.34,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427501",
+      "campaignName": "Подключашка | Павлодар",
+      "date": "2026-09-17",
+      "costTenge": 0.4,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427504",
+      "campaignName": "Подключашка | Петропавловск",
+      "date": "2026-09-14",
+      "costTenge": 2.98,
+      "conversions": 0.5,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427504",
+      "campaignName": "Подключашка | Петропавловск",
+      "date": "2026-09-15",
+      "costTenge": 6.24,
+      "conversions": 0.5,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427507",
+      "campaignName": "Подключашка | Актобе",
+      "date": "2026-09-15",
+      "costTenge": 2.08,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427510",
+      "campaignName": "Подключашка | Караганда",
+      "date": "2026-09-15",
+      "costTenge": 2.94,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427510",
+      "campaignName": "Подключашка | Караганда",
+      "date": "2026-09-16",
+      "costTenge": 0.34,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    },
+    {
+      "campaignId": "24250427510",
+      "campaignName": "Подключашка | Караганда",
+      "date": "2026-09-17",
+      "costTenge": 0.8,
+      "conversions": 0,
+      "dailyBudgetTenge": 4
+    }
+  ],
+  "skipped": false
 }
