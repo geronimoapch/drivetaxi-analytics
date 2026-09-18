@@ -33,7 +33,13 @@ async function getAccessToken() {
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     body: params,
   });
-  const d = await r.json();
+  const text = await r.text();
+  let d;
+  try {
+    d = JSON.parse(text);
+  } catch {
+    throw new Error(`Google OAuth вернул не-JSON ответ (HTTP ${r.status}): ${text.slice(0, 500)}`);
+  }
   if (!r.ok) throw new Error('Google OAuth error: ' + JSON.stringify(d));
   return d.access_token;
 }
@@ -68,7 +74,13 @@ async function fetchCampaignStats(accessToken) {
     headers,
     body: JSON.stringify({ query }),
   });
-  const d = await r.json();
+  const text = await r.text();
+  let d;
+  try {
+    d = JSON.parse(text);
+  } catch {
+    throw new Error(`Google Ads API вернул не-JSON ответ (HTTP ${r.status}) по адресу ${url}: ${text.slice(0, 500)}`);
+  }
   if (!r.ok) throw new Error('Google Ads API error: ' + JSON.stringify(d));
   return d.results || [];
 }
