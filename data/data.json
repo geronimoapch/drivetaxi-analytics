@@ -1,14 +1,16 @@
 {
-  "generatedAt": "2026-09-18T09:43:30.556Z",
+  "generatedAt": "2026-09-18T10:04:30.677Z",
   "channels": {
     "google": {
       "name": "Google Ads",
+      "currency": "USD",
       "spend": 692.6962980000002,
       "dailyBudget": 130,
       "leads": 106
     },
     "meta": {
       "name": "Meta Ads",
+      "currency": "USD",
       "spend": 498.2,
       "dailyBudget": 6700,
       "leads": 17
