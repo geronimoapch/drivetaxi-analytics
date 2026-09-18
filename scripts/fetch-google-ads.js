@@ -69,6 +69,9 @@ async function getAccessToken() {
   return d.access_token;
 }
 
+// Google Ads API отдаёт результаты постранично (nextPageToken) — если не
+// пройти по всем страницам, хвост данных (например, старые даты за прошлый
+// месяц) молча теряется.
 async function runQuery(accessToken, query) {
   const url = `https://googleads.googleapis.com/${API_VERSION}/customers/${GOOGLE_ADS_CUSTOMER_ID}/googleAds:search`;
   const headers = {
@@ -81,20 +84,30 @@ async function runQuery(accessToken, query) {
   if (GOOGLE_ADS_LOGIN_CUSTOMER_ID) {
     headers['login-customer-id'] = GOOGLE_ADS_LOGIN_CUSTOMER_ID;
   }
-  const r = await fetch(url, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ query }),
-  });
-  const text = await r.text();
-  let d;
-  try {
-    d = JSON.parse(text);
-  } catch {
-    throw new Error(`Google Ads API вернул не-JSON ответ (HTTP ${r.status}) по адресу ${url}: ${text.slice(0, 500)}`);
-  }
-  if (!r.ok) throw new Error('Google Ads API error: ' + JSON.stringify(d));
-  return d.results || [];
+
+  const allResults = [];
+  let pageToken = null;
+  do {
+    const body = { query, pageSize: 10000 };
+    if (pageToken) body.pageToken = pageToken;
+    const r = await fetch(url, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(body),
+    });
+    const text = await r.text();
+    let d;
+    try {
+      d = JSON.parse(text);
+    } catch {
+      throw new Error(`Google Ads API вернул не-JSON ответ (HTTP ${r.status}) по адресу ${url}: ${text.slice(0, 500)}`);
+    }
+    if (!r.ok) throw new Error('Google Ads API error: ' + JSON.stringify(d));
+    allResults.push(...(d.results || []));
+    pageToken = d.nextPageToken || null;
+  } while (pageToken);
+
+  return allResults;
 }
 
 // Расход и конверсии по дням — начиная с прошлого месяца.
