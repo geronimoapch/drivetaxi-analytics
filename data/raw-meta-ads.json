@@ -178,30 +178,12 @@
   ],
   "activeCampaigns": [
     {
-      "campaignId": "120252005126620024",
-      "campaignName": "Подключашка - Лиды квиз",
-      "effectiveStatus": "ACTIVE",
-      "dailyBudgetUsd": 40
-    },
-    {
-      "campaignId": "120251780625740024",
-      "campaignName": "Подключашка - Whatsapp",
-      "effectiveStatus": "ACTIVE",
-      "dailyBudgetUsd": 20
-    },
-    {
-      "campaignId": "120249564387340024",
-      "campaignName": "Инвест - Сайт",
-      "effectiveStatus": "ACTIVE",
-      "dailyBudgetUsd": 7
-    },
-    {
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "effectiveStatus": "ACTIVE",
       "dailyBudgetUsd": 60
     }
   ],
-  "totalActiveDailyBudgetUsd": 127,
+  "totalActiveDailyBudgetUsd": 60,
   "skipped": false
 }
