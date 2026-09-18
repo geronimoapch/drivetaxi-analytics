@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сквозная аналитика — DriveTaxi Almaty</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 700px; margin: 60px auto; padding: 0 20px; color: #222; }
+  h1 { font-size: 20px; }
+  .status { padding: 16px; border-radius: 8px; background: #f4f4f5; margin-top: 20px; }
+  pre { white-space: pre-wrap; font-size: 13px; }
+</style>
+</head>
+<body>
+  <h1>Сквозная аналитика — DriveTaxi Almaty</h1>
+  <p>Каркас дашборда. Полноценные таблицы и графики появятся, как только будут
+  подключены все источники данных (Google Ads, Meta Ads, amoCRM).</p>
+  <div class="status" id="status">Загрузка data.json…</div>
+
+<script>
+fetch('data/data.json')
+  .then(r => r.json())
+  .then(d => {
+    document.getElementById('status').innerHTML =
+      '<strong>Данные обновлены:</strong> ' + new Date(d.generatedAt).toLocaleString('ru') +
+      '<pre>' + JSON.stringify(d, null, 2) + '</pre>';
+  })
+  .catch(e => {
+    document.getElementById('status').textContent = 'Пока нет данных: ' + e.message;
+  });
+</script>
+</body>
+</html>
