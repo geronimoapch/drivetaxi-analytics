@@ -3,6 +3,10 @@
 //
 // Google Ads и Meta Ads отдают расход и бюджет в долларах (валюта рекламных
 // кабинетов) — оставляем как есть, без пересчёта в тенге.
+//
+// Данные по расходу/лидам сохраняются ПОДНЕВНО (daily: [{date, spend, leads}]),
+// а не одной суммой — дашборд сам считает нужный период (сегодня/вчера/7 дней/
+// этот месяц/прошлый месяц/произвольный диапазон) прямо в браузере.
 
 const fs = require('fs');
 const path = require('path');
@@ -15,37 +19,36 @@ function readJson(file, fallback) {
   return JSON.parse(fs.readFileSync(p, 'utf8'));
 }
 
-function sum(arr, fn) {
-  return arr.reduce((acc, x) => acc + (fn(x) || 0), 0);
+// Схлопывает построчные данные (может быть несколько кампаний в один день)
+// в один ряд на дату: { date, spend, leads }.
+function toDailySeries(rows, spendField, leadsField) {
+  const byDate = {};
+  rows.forEach((r) => {
+    const date = r.date;
+    if (!byDate[date]) byDate[date] = { date, spend: 0, leads: 0 };
+    byDate[date].spend += Number(r[spendField] || 0);
+    byDate[date].leads += Number(r[leadsField] || 0);
+  });
+  return Object.values(byDate).sort((a, b) => (a.date < b.date ? -1 : 1));
 }
 
 function main() {
-  const google = readJson('raw-google-ads.json', { rows: [] }).rows;
+  const googleRaw = readJson('raw-google-ads.json', { rows: [] });
   const metaRaw = readJson('raw-meta-ads.json', { rows: [] });
-  const meta = metaRaw.rows || [];
   const amo = readJson('raw-amocrm.json', { rows: [] }).rows;
 
-  // --- Итоги по каналам (для таблицы "Эффективность по каналам"), в долларах ---
   const channels = {
     google: {
       name: 'Google Ads',
       currency: 'USD',
-      spend: sum(google, (r) => r.costUsd),
-      dailyBudget: sum(
-        [...new Map(google.map((r) => [r.campaignId, r])).values()],
-        (r) => r.dailyBudgetUsd
-      ),
-      leads: sum(google, (r) => r.conversions),
+      dailyBudget: googleRaw.totalActiveDailyBudgetUsd || 0,
+      daily: toDailySeries(googleRaw.rows || [], 'costUsd', 'conversions'),
     },
     meta: {
       name: 'Meta Ads',
       currency: 'USD',
-      spend: sum(meta, (r) => r.spendUsd),
-      // Бюджет считаем не по истории трат, а по кампаниям, включённым
-      // ПРЯМО СЕЙЧАС (см. fetch-meta-ads.js) — иначе новая кампания без
-      // истории расходов за 30 дней выпадает из суммы.
       dailyBudget: metaRaw.totalActiveDailyBudgetUsd || 0,
-      leads: sum(meta, (r) => r.leads),
+      daily: toDailySeries(metaRaw.rows || [], 'spendUsd', 'leads'),
     },
   };
 
@@ -83,7 +86,7 @@ function main() {
   };
 
   fs.writeFileSync(path.join(dataDir, 'data.json'), JSON.stringify(output, null, 2));
-  console.log('data.json собран:', JSON.stringify(output, null, 2).slice(0, 300) + '...');
+  console.log('data.json собран. Каналы:', Object.keys(channels).join(', '), '| дней данных Google:', channels.google.daily.length, '| дней данных Meta:', channels.meta.daily.length);
 }
 
 main();
