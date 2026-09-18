@@ -21,7 +21,8 @@ function sum(arr, fn) {
 
 function main() {
   const google = readJson('raw-google-ads.json', { rows: [] }).rows;
-  const meta = readJson('raw-meta-ads.json', { rows: [] }).rows;
+  const metaRaw = readJson('raw-meta-ads.json', { rows: [] });
+  const meta = metaRaw.rows || [];
   const amo = readJson('raw-amocrm.json', { rows: [] }).rows;
 
   // --- Итоги по каналам (для таблицы "Эффективность по каналам"), в долларах ---
@@ -40,10 +41,10 @@ function main() {
       name: 'Meta Ads',
       currency: 'USD',
       spend: sum(meta, (r) => r.spendUsd),
-      dailyBudget: sum(
-        [...new Map(meta.map((r) => [r.campaignId, r])).values()],
-        (r) => r.dailyBudgetUsd
-      ),
+      // Бюджет считаем не по истории трат, а по кампаниям, включённым
+      // ПРЯМО СЕЙЧАС (см. fetch-meta-ads.js) — иначе новая кампания без
+      // истории расходов за 30 дней выпадает из суммы.
+      dailyBudget: metaRaw.totalActiveDailyBudgetUsd || 0,
       leads: sum(meta, (r) => r.leads),
     },
   };
