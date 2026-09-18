@@ -47,5 +47,3 @@ function main() {
       leads: sum(meta, (r) => r.leads),
     },
   };
-
-  // --- Сделки amoCRM: по этапам воронки (как на скрине CRM) ---
