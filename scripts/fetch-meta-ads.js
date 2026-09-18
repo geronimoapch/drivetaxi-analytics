@@ -27,6 +27,22 @@ const API_VERSION = 'v21.0';
 // могут отфильтровать не так, как ожидается.
 const ACTIVE_FILTER = encodeURIComponent(JSON.stringify(['ACTIVE']));
 
+// Graph API отдаёт результаты постранично — если не пройти по всем страницам
+// через paging.next, хвост данных молча теряется. Используем это для всех
+// запросов, где строк может быть больше одной страницы.
+async function fetchAllPages(firstUrl, errorLabel) {
+  const allRows = [];
+  let url = firstUrl;
+  while (url) {
+    const r = await fetch(url);
+    const d = await r.json();
+    if (!r.ok || d.error) throw new Error(`Meta API error (${errorLabel}): ` + JSON.stringify(d.error || d));
+    allRows.push(...(d.data || []));
+    url = d.paging && d.paging.next ? d.paging.next : null;
+  }
+  return allRows;
+}
+
 async function fetchInsights() {
   const fields = [
     'campaign_id',
@@ -37,14 +53,12 @@ async function fetchInsights() {
     'date_start',
   ].join(',');
 
+  // За период "с прошлого месяца по сегодня" с разбивкой по дням (time_increment=1)
+  // строк обычно больше одной страницы.
   const url = `https://graph.facebook.com/${API_VERSION}/${META_AD_ACCOUNT_ID}/insights` +
     `?level=campaign&time_range={"since":"${firstDayOfPreviousMonth()}","until":"${today()}"}` +
-    `&time_increment=1&fields=${fields}&access_token=${META_ACCESS_TOKEN}`;
-
-  const r = await fetch(url);
-  const d = await r.json();
-  if (!r.ok || d.error) throw new Error('Meta API error: ' + JSON.stringify(d.error || d));
-  return d.data || [];
+    `&time_increment=1&limit=500&fields=${fields}&access_token=${META_ACCESS_TOKEN}`;
+  return fetchAllPages(url, 'insights');
 }
 
 // Все кампании, которые включены прямо сейчас, с их бюджетом (если он задан
@@ -53,10 +67,7 @@ async function fetchActiveCampaigns() {
   const url = `https://graph.facebook.com/${API_VERSION}/${META_AD_ACCOUNT_ID}/campaigns` +
     `?fields=id,name,daily_budget,lifetime_budget,effective_status` +
     `&effective_status=${ACTIVE_FILTER}&limit=500&access_token=${META_ACCESS_TOKEN}`;
-  const r = await fetch(url);
-  const d = await r.json();
-  if (!r.ok || d.error) throw new Error('Meta API error (campaigns): ' + JSON.stringify(d.error || d));
-  return d.data || [];
+  return fetchAllPages(url, 'campaigns');
 }
 
 // Все группы объявлений, которые включены прямо сейчас — нужны на случай,
@@ -65,10 +76,7 @@ async function fetchActiveAdsets() {
   const url = `https://graph.facebook.com/${API_VERSION}/${META_AD_ACCOUNT_ID}/adsets` +
     `?fields=id,name,campaign_id,daily_budget,lifetime_budget,effective_status` +
     `&effective_status=${ACTIVE_FILTER}&limit=500&access_token=${META_ACCESS_TOKEN}`;
-  const r = await fetch(url);
-  const d = await r.json();
-  if (!r.ok || d.error) throw new Error('Meta API error (adsets): ' + JSON.stringify(d.error || d));
-  return d.data || [];
+  return fetchAllPages(url, 'adsets');
 }
 
 function today() {
