@@ -1,5 +1,8 @@
 // Забирает расход, лиды (конверсии) и дневной бюджет по кампаниям Google Ads
 // за последние 30 дней и сохраняет сырые данные в data/raw-google-ads.json.
+// Важно: цифры приходят от Google в валюте самого рекламного аккаунта (у нас
+// это доллары), поэтому поля называются costUsd / dailyBudgetUsd. Дашборд
+// показывает суммы как есть, в долларах, без перевода в тенге.
 //
 // Нужные секреты (передаются как переменные окружения в GitHub Actions):
 //   GOOGLE_ADS_DEVELOPER_TOKEN
@@ -99,9 +102,9 @@ async function main() {
     campaignId: r.campaign.id,
     campaignName: r.campaign.name,
     date: r.segments.date,
-    costTenge: Number(r.metrics.costMicros || 0) / 1_000_000,
+    costUsd: Number(r.metrics.costMicros || 0) / 1_000_000,
     conversions: Number(r.metrics.conversions || 0),
-    dailyBudgetTenge: Number(r.campaignBudget?.amountMicros || 0) / 1_000_000,
+    dailyBudgetUsd: Number(r.campaignBudget?.amountMicros || 0) / 1_000_000,
   }));
 
   fs.mkdirSync(path.join(__dirname, '..', 'data'), { recursive: true });
