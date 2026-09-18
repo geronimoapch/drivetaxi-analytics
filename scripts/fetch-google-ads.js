@@ -7,6 +7,7 @@
 //   GOOGLE_ADS_CLIENT_SECRET
 //   GOOGLE_ADS_REFRESH_TOKEN
 //   GOOGLE_ADS_CUSTOMER_ID   (без дефисов, например 1234567890)
+//   GOOGLE_ADS_LOGIN_CUSTOMER_ID  (ID менеджерского аккаунта — там, где выдан токен разработчика)
 
 const fs = require('fs');
 const path = require('path');
@@ -17,6 +18,7 @@ const {
   GOOGLE_ADS_CLIENT_SECRET,
   GOOGLE_ADS_REFRESH_TOKEN,
   GOOGLE_ADS_CUSTOMER_ID,
+  GOOGLE_ADS_LOGIN_CUSTOMER_ID,
 } = process.env;
 
 async function getAccessToken() {
@@ -51,13 +53,19 @@ async function fetchCampaignStats(accessToken) {
   `;
 
   const url = `https://googleads.googleapis.com/v17/customers/${GOOGLE_ADS_CUSTOMER_ID}/googleAds:search`;
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${accessToken}`,
+    'developer-token': GOOGLE_ADS_DEVELOPER_TOKEN,
+  };
+  // Токен разработчика выдан на менеджерском аккаунте (MCC) — нужно явно
+  // указать, через какой MCC идёт запрос, иначе Google Ads API откажет.
+  if (GOOGLE_ADS_LOGIN_CUSTOMER_ID) {
+    headers['login-customer-id'] = GOOGLE_ADS_LOGIN_CUSTOMER_ID;
+  }
   const r = await fetch(url, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${accessToken}`,
-      'developer-token': GOOGLE_ADS_DEVELOPER_TOKEN,
-    },
+    headers,
     body: JSON.stringify({ query }),
   });
   const d = await r.json();
