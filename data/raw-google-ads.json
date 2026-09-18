@@ -5,441 +5,416 @@
       "campaignName": "Аренда авто",
       "date": "2026-09-02",
       "costUsd": 16.262884,
-      "conversions": 4,
-      "dailyBudgetUsd": 40
+      "conversions": 4
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-03",
       "costUsd": 20.171948,
-      "conversions": 3,
-      "dailyBudgetUsd": 40
+      "conversions": 3
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-04",
       "costUsd": 14.028242,
-      "conversions": 2,
-      "dailyBudgetUsd": 40
+      "conversions": 2
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-05",
       "costUsd": 14.728306,
-      "conversions": 0,
-      "dailyBudgetUsd": 40
+      "conversions": 0
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-07",
       "costUsd": 67.640949,
-      "conversions": 4,
-      "dailyBudgetUsd": 40
+      "conversions": 4
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-08",
       "costUsd": 19.967614,
-      "conversions": 6,
-      "dailyBudgetUsd": 40
+      "conversions": 6
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-09",
       "costUsd": 20.595842,
-      "conversions": 7,
-      "dailyBudgetUsd": 40
+      "conversions": 7
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-10",
       "costUsd": 21.489922,
-      "conversions": 4,
-      "dailyBudgetUsd": 40
+      "conversions": 4
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-11",
       "costUsd": 22.029975,
-      "conversions": 3.15,
-      "dailyBudgetUsd": 40
+      "conversions": 3.15
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-12",
       "costUsd": 22.924809,
-      "conversions": 4.6,
-      "dailyBudgetUsd": 40
+      "conversions": 4.6
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-13",
       "costUsd": 21.393181,
-      "conversions": 4.5,
-      "dailyBudgetUsd": 40
+      "conversions": 4.5
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-14",
       "costUsd": 40.537524,
-      "conversions": 4.75,
-      "dailyBudgetUsd": 40
+      "conversions": 4.75
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-15",
       "costUsd": 40.490271,
-      "conversions": 2.75,
-      "dailyBudgetUsd": 40
+      "conversions": 2.75
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-16",
       "costUsd": 41.256314,
-      "conversions": 1,
-      "dailyBudgetUsd": 40
+      "conversions": 1
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда авто",
       "date": "2026-09-17",
       "costUsd": 40.94,
-      "conversions": 5,
-      "dailyBudgetUsd": 40
+      "conversions": 5
+    },
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "date": "2026-09-18",
+      "costUsd": 26.549376,
+      "conversions": 5
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-02",
       "costUsd": 8.599319,
-      "conversions": 1,
-      "dailyBudgetUsd": 10
+      "conversions": 1
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-03",
       "costUsd": 6.266337,
-      "conversions": 1,
-      "dailyBudgetUsd": 10
+      "conversions": 1
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-04",
       "costUsd": 19.96805,
-      "conversions": 1,
-      "dailyBudgetUsd": 10
+      "conversions": 1
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-07",
       "costUsd": 19.995862,
-      "conversions": 2,
-      "dailyBudgetUsd": 10
+      "conversions": 2
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-08",
       "costUsd": 20,
-      "conversions": 2,
-      "dailyBudgetUsd": 10
+      "conversions": 2
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-09",
       "costUsd": 18.22,
-      "conversions": 1,
-      "dailyBudgetUsd": 10
+      "conversions": 1
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-10",
       "costUsd": 11.39,
-      "conversions": 1,
-      "dailyBudgetUsd": 10
+      "conversions": 1
     },
     {
       "campaignId": "24206794723",
       "campaignName": "Drive Taxi | Подключашка | KZ",
       "date": "2026-09-11",
       "costUsd": 10.26,
-      "conversions": 0,
-      "dailyBudgetUsd": 10
+      "conversions": 0
     },
     {
       "campaignId": "24228605411",
       "campaignName": "Еда - Квиз",
       "date": "2026-09-08",
       "costUsd": 6.08,
-      "conversions": 2,
-      "dailyBudgetUsd": 20
+      "conversions": 2
     },
     {
       "campaignId": "24228605411",
       "campaignName": "Еда - Квиз",
       "date": "2026-09-09",
       "costUsd": 14.9,
-      "conversions": 5,
-      "dailyBudgetUsd": 20
+      "conversions": 5
     },
     {
       "campaignId": "24228605411",
       "campaignName": "Еда - Квиз",
       "date": "2026-09-10",
       "costUsd": 10.333674,
-      "conversions": 4,
-      "dailyBudgetUsd": 20
+      "conversions": 4
     },
     {
       "campaignId": "24228605411",
       "campaignName": "Еда - Квиз",
       "date": "2026-09-11",
       "costUsd": 9.7,
-      "conversions": 9,
-      "dailyBudgetUsd": 20
+      "conversions": 9
     },
     {
       "campaignId": "24228605411",
       "campaignName": "Еда - Квиз",
       "date": "2026-09-14",
       "costUsd": 14.04,
-      "conversions": 8,
-      "dailyBudgetUsd": 20
+      "conversions": 8
     },
     {
       "campaignId": "24228605411",
       "campaignName": "Еда - Квиз",
       "date": "2026-09-15",
       "costUsd": 15.5,
-      "conversions": 9,
-      "dailyBudgetUsd": 20
+      "conversions": 9
     },
     {
       "campaignId": "24240476138",
       "campaignName": "Подключашка | Одноблочник",
       "date": "2026-09-11",
       "costUsd": 8.465275,
-      "conversions": 0.25,
-      "dailyBudgetUsd": 10
+      "conversions": 0.25
     },
     {
       "campaignId": "24240476138",
       "campaignName": "Подключашка | Одноблочник",
       "date": "2026-09-14",
       "costUsd": 12.48,
-      "conversions": 0,
-      "dailyBudgetUsd": 10
+      "conversions": 0
+    },
+    {
+      "campaignId": "24245392071",
+      "campaignName": "Подключашка | КВИЗ - ВЕСЬ КЗ",
+      "date": "2026-09-18",
+      "costUsd": 8.81,
+      "conversions": 0
     },
     {
       "campaignId": "24247628106",
       "campaignName": "Инвест - Алматы",
       "date": "2026-09-15",
       "costUsd": 0.78,
-      "conversions": 1,
-      "dailyBudgetUsd": 5
+      "conversions": 1
     },
     {
       "campaignId": "24250427483",
       "campaignName": "Подключашка | Алматы",
       "date": "2026-09-15",
       "costUsd": 13.82,
-      "conversions": 0,
-      "dailyBudgetUsd": 7
+      "conversions": 0
     },
     {
       "campaignId": "24250427483",
       "campaignName": "Подключашка | Алматы",
       "date": "2026-09-16",
       "costUsd": 1.63,
-      "conversions": 0,
-      "dailyBudgetUsd": 7
+      "conversions": 0
     },
     {
       "campaignId": "24250427483",
       "campaignName": "Подключашка | Алматы",
       "date": "2026-09-17",
       "costUsd": 2.92,
-      "conversions": 0,
-      "dailyBudgetUsd": 7
+      "conversions": 0
     },
     {
       "campaignId": "24250427486",
       "campaignName": "Подключашка | Астана",
       "date": "2026-09-15",
       "costUsd": 11.13,
-      "conversions": 1,
-      "dailyBudgetUsd": 7
+      "conversions": 1
     },
     {
       "campaignId": "24250427486",
       "campaignName": "Подключашка | Астана",
       "date": "2026-09-16",
       "costUsd": 2.37,
-      "conversions": 0,
-      "dailyBudgetUsd": 7
+      "conversions": 0
     },
     {
       "campaignId": "24250427486",
       "campaignName": "Подключашка | Астана",
       "date": "2026-09-17",
       "costUsd": 3.58,
-      "conversions": 1,
-      "dailyBudgetUsd": 7
+      "conversions": 1
     },
     {
       "campaignId": "24250427489",
       "campaignName": "Подключашка | Шымкент",
       "date": "2026-09-15",
       "costUsd": 4.45,
-      "conversions": 0,
-      "dailyBudgetUsd": 7
+      "conversions": 0
     },
     {
       "campaignId": "24250427489",
       "campaignName": "Подключашка | Шымкент",
       "date": "2026-09-16",
       "costUsd": 0.78,
-      "conversions": 0,
-      "dailyBudgetUsd": 7
+      "conversions": 0
     },
     {
       "campaignId": "24250427489",
       "campaignName": "Подключашка | Шымкент",
       "date": "2026-09-17",
       "costUsd": 0.72,
-      "conversions": 0,
-      "dailyBudgetUsd": 7
+      "conversions": 0
+    },
+    {
+      "campaignId": "24250427489",
+      "campaignName": "Подключашка | Шымкент",
+      "date": "2026-09-18",
+      "costUsd": 0.4,
+      "conversions": 0
     },
     {
       "campaignId": "24250427492",
       "campaignName": "Подключашка | Атырау",
       "date": "2026-09-15",
       "costUsd": 0.38,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427492",
       "campaignName": "Подключашка | Атырау",
       "date": "2026-09-16",
       "costUsd": 1.17,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427495",
       "campaignName": "Подключашка | Костанай",
       "date": "2026-09-15",
       "costUsd": 0.33,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427495",
       "campaignName": "Подключашка | Костанай",
       "date": "2026-09-16",
       "costUsd": 0.66,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427495",
       "campaignName": "Подключашка | Костанай",
       "date": "2026-09-17",
       "costUsd": 0.8,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427501",
       "campaignName": "Подключашка | Павлодар",
       "date": "2026-09-15",
       "costUsd": 0.4,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427501",
       "campaignName": "Подключашка | Павлодар",
       "date": "2026-09-16",
       "costUsd": 0.34,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427501",
       "campaignName": "Подключашка | Павлодар",
       "date": "2026-09-17",
       "costUsd": 0.4,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427504",
       "campaignName": "Подключашка | Петропавловск",
       "date": "2026-09-14",
       "costUsd": 2.98,
-      "conversions": 0.5,
-      "dailyBudgetUsd": 4
+      "conversions": 0.5
     },
     {
       "campaignId": "24250427504",
       "campaignName": "Подключашка | Петропавловск",
       "date": "2026-09-15",
       "costUsd": 6.24,
-      "conversions": 0.5,
-      "dailyBudgetUsd": 4
+      "conversions": 0.5
     },
     {
       "campaignId": "24250427507",
       "campaignName": "Подключашка | Актобе",
       "date": "2026-09-15",
       "costUsd": 2.08,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427510",
       "campaignName": "Подключашка | Караганда",
       "date": "2026-09-15",
       "costUsd": 2.94,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427510",
       "campaignName": "Подключашка | Караганда",
       "date": "2026-09-16",
       "costUsd": 0.34,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     },
     {
       "campaignId": "24250427510",
       "campaignName": "Подключашка | Караганда",
       "date": "2026-09-17",
       "costUsd": 0.8,
-      "conversions": 0,
-      "dailyBudgetUsd": 4
+      "conversions": 0
     }
   ],
+  "activeCampaigns": [
+    {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда авто",
+      "status": "ENABLED",
+      "dailyBudgetUsd": 40
+    }
+  ],
+  "totalActiveDailyBudgetUsd": 40,
   "skipped": false
 }
