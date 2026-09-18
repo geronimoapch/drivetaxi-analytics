@@ -101,4 +101,15 @@ async function main() {
     dailyBudgetTenge: budgetByCampaign[r.campaign_id] || adsetBudgets[r.campaign_id] || 0,
   }));
 
-  fs.mkdirSync(path.join(__dirname, '..',
+  fs.mkdirSync(path.join(__dirname, '..', 'data'), { recursive: true });
+  fs.writeFileSync(
+    path.join(__dirname, '..', 'data', 'raw-meta-ads.json'),
+    JSON.stringify({ rows: normalized, skipped: false }, null, 2)
+  );
+  console.log(`Meta Ads: сохранено ${normalized.length} строк.`);
+}
+
+main().catch((e) => {
+  console.error('Ошибка сбора Meta Ads:', e.message);
+  process.exit(1);
+});
