@@ -5,28 +5,349 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Сквозная аналитика — DriveTaxi Almaty</title>
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 700px; margin: 60px auto; padding: 0 20px; color: #222; }
-  h1 { font-size: 20px; }
-  .status { padding: 16px; border-radius: 8px; background: #f4f4f5; margin-top: 20px; }
-  pre { white-space: pre-wrap; font-size: 13px; }
+  :root {
+    --bg: #f7f7f8;
+    --card: #ffffff;
+    --border: #e5e5e8;
+    --text: #1a1a1e;
+    --muted: #6b6b74;
+    --accent: #2563eb;
+    --accent-bg: #eaf0fe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 13px; margin: 0 0 24px; }
+
+  .periods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .period-btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .period-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .custom-range {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .custom-range.visible { display: flex; flex-wrap: wrap; }
+  .custom-range input[type="date"] {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 8px;
+    font-size: 13px;
+  }
+  .custom-range button {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .card .label { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .card .value { font-size: 24px; font-weight: 600; }
+  .card .sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.03em; }
+  tr:last-child td { border-bottom: none; }
+  tr.total-row td { font-weight: 600; background: var(--accent-bg); }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  th.num { text-align: right; }
+
+  .status {
+    margin-top: 20px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .error-box {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
 </style>
 </head>
 <body>
+<div class="wrap">
   <h1>Сквозная аналитика — DriveTaxi Almaty</h1>
-  <p>Каркас дашборда. Полноценные таблицы и графики появятся, как только будут
-  подключены все источники данных (Google Ads, Meta Ads, amoCRM).</p>
-  <div class="status" id="status">Загрузка data.json…</div>
+  <p class="subtitle" id="updated-line">Загрузка данных…</p>
+
+  <div id="dashboard" style="display:none;">
+    <div class="periods" id="periods"></div>
+    <div class="custom-range" id="custom-range">
+      <span>с</span>
+      <input type="date" id="range-start">
+      <span>по</span>
+      <input type="date" id="range-end">
+      <button id="range-apply">Применить</button>
+    </div>
+
+    <div class="cards" id="cards"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Канал</th>
+          <th class="num">Лиды</th>
+          <th class="num">Потрачено, $</th>
+          <th class="num">Цена за лид, $</th>
+          <th class="num">Дневной лимит, $</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <p class="status" id="raw-toggle-line"><a href="#" id="raw-toggle">Показать сырые данные</a></p>
+    <pre id="raw" style="display:none; font-size:12px; white-space:pre-wrap; background:#fff; border:1px solid var(--border); border-radius:12px; padding:16px;"></pre>
+  </div>
+
+  <div id="error-holder"></div>
+</div>
 
 <script>
+const PRESETS = [
+  { id: 'today', label: 'Сегодня' },
+  { id: 'yesterday', label: 'Вчера' },
+  { id: 'last7', label: 'Последние 7 дней' },
+  { id: 'thisMonth', label: 'Этот месяц' },
+  { id: 'lastMonth', label: 'Прошлый месяц' },
+  { id: 'custom', label: 'Диапазон дат' },
+];
+
+function pad2(n) {
+  return String(n).padStart(2, '0');
+}
+// Форматируем дату по локальным (браузерным) году/месяцу/дню, а не через
+// toISOString() — тот переводит в UTC и в часовых поясах восточнее UTC
+// (как у нас, UTC+5) может сдвинуть дату на день назад.
+function isoDate(d) {
+  return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+}
+function addDays(d, n) {
+  const r = new Date(d);
+  r.setDate(r.getDate() + n);
+  return r;
+}
+function startOfMonth(d) {
+  return new Date(d.getFullYear(), d.getMonth(), 1);
+}
+
+function getRangeForPreset(preset, customStart, customEnd) {
+  const today = new Date();
+  const todayIso = isoDate(today);
+  switch (preset) {
+    case 'today':
+      return [todayIso, todayIso];
+    case 'yesterday': {
+      const y = isoDate(addDays(today, -1));
+      return [y, y];
+    }
+    case 'last7':
+      return [isoDate(addDays(today, -6)), todayIso];
+    case 'thisMonth':
+      return [isoDate(startOfMonth(today)), todayIso];
+    case 'lastMonth': {
+      const firstThisMonth = startOfMonth(today);
+      const lastDayPrevMonth = addDays(firstThisMonth, -1);
+      const firstDayPrevMonth = startOfMonth(lastDayPrevMonth);
+      return [isoDate(firstDayPrevMonth), isoDate(lastDayPrevMonth)];
+    }
+    case 'custom':
+      return [customStart || todayIso, customEnd || todayIso];
+    default:
+      return [todayIso, todayIso];
+  }
+}
+
+function sumRange(daily, start, end) {
+  let spend = 0, leads = 0;
+  (daily || []).forEach((row) => {
+    if (row.date >= start && row.date <= end) {
+      spend += row.spend;
+      leads += row.leads;
+    }
+  });
+  return { spend, leads };
+}
+
+function fmtMoney(v) {
+  return v.toLocaleString('ru-RU', { maximumFractionDigits: 2, minimumFractionDigits: 0 });
+}
+function fmtCpl(spend, leads) {
+  if (!leads) return '—';
+  return fmtMoney(spend / leads);
+}
+
+let currentPreset = 'today';
+let customStart = null;
+let customEnd = null;
+
+function render(data) {
+  const [start, end] = getRangeForPreset(currentPreset, customStart, customEnd);
+
+  const channels = data.channels || {};
+  const rows = Object.keys(channels).map((key) => {
+    const ch = channels[key];
+    const { spend, leads } = sumRange(ch.daily, start, end);
+    return { name: ch.name, spend, leads, dailyBudget: ch.dailyBudget || 0 };
+  });
+
+  const totalSpend = rows.reduce((a, r) => a + r.spend, 0);
+  const totalLeads = rows.reduce((a, r) => a + r.leads, 0);
+  const totalBudget = rows.reduce((a, r) => a + r.dailyBudget, 0);
+
+  // Карточки сверху — по общей сумме за период.
+  const cards = document.getElementById('cards');
+  cards.innerHTML = `
+    <div class="card">
+      <div class="label">Лиды за период</div>
+      <div class="value">${totalLeads}</div>
+    </div>
+    <div class="card">
+      <div class="label">Потрачено за период</div>
+      <div class="value">$${fmtMoney(totalSpend)}</div>
+    </div>
+    <div class="card">
+      <div class="label">Цена за лид</div>
+      <div class="value">$${fmtCpl(totalSpend, totalLeads)}</div>
+    </div>
+    <div class="card">
+      <div class="label">Дневной лимит сейчас</div>
+      <div class="value">$${fmtMoney(totalBudget)}</div>
+      <div class="sub">по всем активным кампаниям</div>
+    </div>
+  `;
+
+  // Таблица по каналам.
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = rows.map((r) => `
+    <tr>
+      <td>${r.name}</td>
+      <td class="num">${r.leads}</td>
+      <td class="num">$${fmtMoney(r.spend)}</td>
+      <td class="num">$${fmtCpl(r.spend, r.leads)}</td>
+      <td class="num">$${fmtMoney(r.dailyBudget)}</td>
+    </tr>
+  `).join('') + `
+    <tr class="total-row">
+      <td>Итого</td>
+      <td class="num">${totalLeads}</td>
+      <td class="num">$${fmtMoney(totalSpend)}</td>
+      <td class="num">$${fmtCpl(totalSpend, totalLeads)}</td>
+      <td class="num">$${fmtMoney(totalBudget)}</td>
+    </tr>
+  `;
+
+  document.getElementById('updated-line').textContent =
+    'Данные обновлены: ' + new Date(data.generatedAt).toLocaleString('ru') +
+    ` · период: ${start === end ? start : start + ' — ' + end}`;
+}
+
+function buildPeriodButtons(data) {
+  const container = document.getElementById('periods');
+  container.innerHTML = '';
+  PRESETS.forEach((p) => {
+    const btn = document.createElement('button');
+    btn.className = 'period-btn' + (p.id === currentPreset ? ' active' : '');
+    btn.textContent = p.label;
+    btn.addEventListener('click', () => {
+      currentPreset = p.id;
+      document.querySelectorAll('.period-btn').forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const customRange = document.getElementById('custom-range');
+      if (p.id === 'custom') {
+        customRange.classList.add('visible');
+        if (!customStart || !customEnd) {
+          const today = isoDate(new Date());
+          document.getElementById('range-start').value = today;
+          document.getElementById('range-end').value = today;
+          customStart = today;
+          customEnd = today;
+        }
+      } else {
+        customRange.classList.remove('visible');
+      }
+      render(data);
+    });
+    container.appendChild(btn);
+  });
+
+  document.getElementById('range-apply').addEventListener('click', () => {
+    customStart = document.getElementById('range-start').value;
+    customEnd = document.getElementById('range-end').value;
+    render(data);
+  });
+}
+
 fetch('data/data.json')
-  .then(r => r.json())
-  .then(d => {
-    document.getElementById('status').innerHTML =
-      '<strong>Данные обновлены:</strong> ' + new Date(d.generatedAt).toLocaleString('ru') +
-      '<pre>' + JSON.stringify(d, null, 2) + '</pre>';
+  .then((r) => r.json())
+  .then((data) => {
+    document.getElementById('dashboard').style.display = 'block';
+    buildPeriodButtons(data);
+    render(data);
+
+    document.getElementById('raw').textContent = JSON.stringify(data, null, 2);
+    document.getElementById('raw-toggle').addEventListener('click', (e) => {
+      e.preventDefault();
+      const raw = document.getElementById('raw');
+      raw.style.display = raw.style.display === 'none' ? 'block' : 'none';
+    });
   })
-  .catch(e => {
-    document.getElementById('status').textContent = 'Пока нет данных: ' + e.message;
+  .catch((e) => {
+    document.getElementById('updated-line').textContent = '';
+    document.getElementById('error-holder').innerHTML =
+      '<div class="error-box">Пока нет данных: ' + e.message + '</div>';
   });
 </script>
 </body>
