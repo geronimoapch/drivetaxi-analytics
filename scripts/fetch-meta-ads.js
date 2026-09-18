@@ -32,12 +32,32 @@ async function fetchInsights() {
 }
 
 async function fetchDailyBudgets() {
+  // effective_status учитывает не только статус самой кампании, но и то, что она
+  // могла быть остановлена на уровне аккаунта/расписания — берём только реально включённые.
   const url = `https://graph.facebook.com/${API_VERSION}/${META_AD_ACCOUNT_ID}/campaigns` +
-    `?fields=id,name,daily_budget,status&access_token=${META_ACCESS_TOKEN}`;
+    `?fields=id,name,daily_budget,effective_status&effective_status=["ACTIVE"]&limit=500&access_token=${META_ACCESS_TOKEN}`;
   const r = await fetch(url);
   const d = await r.json();
   if (!r.ok || d.error) throw new Error('Meta API error (budgets): ' + JSON.stringify(d.error || d));
   return d.data || [];
+}
+
+// У многих кампаний бюджет задан не на уровне кампании (CBO), а на уровне
+// групп объявлений (adset) — тогда daily_budget у самой кампании пустой.
+// Забираем бюджеты adset-ов и суммируем их по campaign_id как запасной вариант.
+async function fetchAdsetDailyBudgets() {
+  const url = `https://graph.facebook.com/${API_VERSION}/${META_AD_ACCOUNT_ID}/adsets` +
+    `?fields=id,campaign_id,daily_budget,effective_status&effective_status=["ACTIVE"]&limit=500&access_token=${META_ACCESS_TOKEN}`;
+  const r = await fetch(url);
+  const d = await r.json();
+  if (!r.ok || d.error) throw new Error('Meta API error (adset budgets): ' + JSON.stringify(d.error || d));
+  const sumByCampaign = {};
+  (d.data || []).forEach((a) => {
+    const budget = Number(a.daily_budget || 0);
+    if (!budget) return;
+    sumByCampaign[a.campaign_id] = (sumByCampaign[a.campaign_id] || 0) + budget;
+  });
+  return sumByCampaign;
 }
 
 function today() {
@@ -63,7 +83,11 @@ async function main() {
     return;
   }
 
-  const [insights, budgets] = await Promise.all([fetchInsights(), fetchDailyBudgets()]);
+  const [insights, budgets, adsetBudgets] = await Promise.all([
+    fetchInsights(),
+    fetchDailyBudgets(),
+    fetchAdsetDailyBudgets(),
+  ]);
   const budgetByCampaign = {};
   budgets.forEach((b) => { budgetByCampaign[b.id] = Number(b.daily_budget || 0); });
 
@@ -73,18 +97,8 @@ async function main() {
     date: r.date_start,
     spendTenge: Number(r.spend || 0),
     leads: extractLeads(r.actions),
-    dailyBudgetTenge: budgetByCampaign[r.campaign_id] || 0,
+    // Сначала пробуем бюджет кампании (CBO), если пусто — сумму бюджетов её групп объявлений.
+    dailyBudgetTenge: budgetByCampaign[r.campaign_id] || adsetBudgets[r.campaign_id] || 0,
   }));
 
-  fs.mkdirSync(path.join(__dirname, '..', 'data'), { recursive: true });
-  fs.writeFileSync(
-    path.join(__dirname, '..', 'data', 'raw-meta-ads.json'),
-    JSON.stringify({ rows: normalized, skipped: false }, null, 2)
-  );
-  console.log(`Meta Ads: сохранено ${normalized.length} строк.`);
-}
-
-main().catch((e) => {
-  console.error('Ошибка сбора Meta Ads:', e.message);
-  process.exit(1);
-});
+  fs.mkdirSync(path.join(__dirname, '..',
