@@ -174,6 +174,846 @@
       "date": "2026-08-11",
       "spendUsd": 9.15,
       "leads": 1
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-12",
+      "spendUsd": 1.99,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-12",
+      "spendUsd": 8.91,
+      "leads": 1
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-13",
+      "spendUsd": 35.13,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-13",
+      "spendUsd": 10.45,
+      "leads": 4
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-13",
+      "spendUsd": 9.87,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-14",
+      "spendUsd": 43.89,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-14",
+      "spendUsd": 10.61,
+      "leads": 3
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-14",
+      "spendUsd": 4.05,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-15",
+      "spendUsd": 25.1,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-15",
+      "spendUsd": 9.97,
+      "leads": 4
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-16",
+      "spendUsd": 30.58,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-16",
+      "spendUsd": 10.33,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-17",
+      "spendUsd": 25.34,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-17",
+      "spendUsd": 9.9,
+      "leads": 2
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-18",
+      "spendUsd": 5.99,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-18",
+      "spendUsd": 10.33,
+      "leads": 3
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-19",
+      "spendUsd": 17.61,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-19",
+      "spendUsd": 10.03,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-19",
+      "spendUsd": 20.06,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-20",
+      "spendUsd": 42.67,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-20",
+      "spendUsd": 8.7,
+      "leads": 3
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-20",
+      "spendUsd": 9.89,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-21",
+      "spendUsd": 30.76,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-21",
+      "spendUsd": 2.58,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-21",
+      "spendUsd": 9.53,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-22",
+      "spendUsd": 26.74,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-22",
+      "spendUsd": 8.55,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-23",
+      "spendUsd": 22.08,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-23",
+      "spendUsd": 10.01,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-24",
+      "spendUsd": 43.41,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-24",
+      "spendUsd": 5.17,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-24",
+      "spendUsd": 11.7,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-25",
+      "spendUsd": 63.98,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-25",
+      "spendUsd": 10.16,
+      "leads": 3
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-25",
+      "spendUsd": 12.28,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-26",
+      "spendUsd": 47.96,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-26",
+      "spendUsd": 9.39,
+      "leads": 5
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-26",
+      "spendUsd": 8.97,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-27",
+      "spendUsd": 50.45,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-27",
+      "spendUsd": 5.59,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-27",
+      "spendUsd": 9.93,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-28",
+      "spendUsd": 41.27,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-28",
+      "spendUsd": 5.28,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-28",
+      "spendUsd": 8.54,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-29",
+      "spendUsd": 46.23,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-29",
+      "spendUsd": 3.75,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-29",
+      "spendUsd": 8.44,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-30",
+      "spendUsd": 23.05,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-30",
+      "spendUsd": 5.06,
+      "leads": 3
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-30",
+      "spendUsd": 9.69,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-08-31",
+      "spendUsd": 34.4,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-08-31",
+      "spendUsd": 4.74,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-08-31",
+      "spendUsd": 13.13,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-01",
+      "spendUsd": 33.77,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-01",
+      "spendUsd": 3.3,
+      "leads": 5
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-09-01",
+      "spendUsd": 6.1,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-01",
+      "spendUsd": 2.89,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-02",
+      "spendUsd": 44.85,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-02",
+      "spendUsd": 5.31,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-09-02",
+      "spendUsd": 11.48,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-02",
+      "spendUsd": 12.06,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-03",
+      "spendUsd": 25.27,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-03",
+      "spendUsd": 4.09,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-09-03",
+      "spendUsd": 5.04,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-03",
+      "spendUsd": 4.9,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-04",
+      "spendUsd": 37.43,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-04",
+      "spendUsd": 5.89,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251106917850024",
+      "campaignName": "Подключашка - Ватсап",
+      "date": "2026-09-04",
+      "spendUsd": 2.27,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-04",
+      "spendUsd": 19.53,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-05",
+      "spendUsd": 35.87,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-05",
+      "spendUsd": 6.47,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-05",
+      "spendUsd": 19.77,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-06",
+      "spendUsd": 73.53,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-06",
+      "spendUsd": 6.38,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-06",
+      "spendUsd": 21.82,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-07",
+      "spendUsd": 46.56,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-07",
+      "spendUsd": 5.4,
+      "leads": 4
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-07",
+      "spendUsd": 19.64,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-08",
+      "spendUsd": 37.03,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-08",
+      "spendUsd": 5.7,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-08",
+      "spendUsd": 28.84,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251887419660024",
+      "campaignName": "Еда - Whatsapp",
+      "date": "2026-09-08",
+      "spendUsd": 15.84,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-09",
+      "spendUsd": 17.71,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-09",
+      "spendUsd": 4.99,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-09",
+      "spendUsd": 17.3,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251887419660024",
+      "campaignName": "Еда - Whatsapp",
+      "date": "2026-09-09",
+      "spendUsd": 29.68,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-10",
+      "spendUsd": 32.04,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-10",
+      "spendUsd": 4.61,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-10",
+      "spendUsd": 17.14,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251887419660024",
+      "campaignName": "Еда - Whatsapp",
+      "date": "2026-09-10",
+      "spendUsd": 58.02,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-11",
+      "spendUsd": 28.18,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-11",
+      "spendUsd": 4.37,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-11",
+      "spendUsd": 9.5,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251887419660024",
+      "campaignName": "Еда - Whatsapp",
+      "date": "2026-09-11",
+      "spendUsd": 39.71,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-12",
+      "spendUsd": 25.95,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-12",
+      "spendUsd": 3.48,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251887419660024",
+      "campaignName": "Еда - Whatsapp",
+      "date": "2026-09-12",
+      "spendUsd": 0,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-13",
+      "spendUsd": 27.3,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-13",
+      "spendUsd": 5.97,
+      "leads": 4
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-14",
+      "spendUsd": 51.48,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-14",
+      "spendUsd": 5.6,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-14",
+      "spendUsd": 22.06,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251887419660024",
+      "campaignName": "Еда - Whatsapp",
+      "date": "2026-09-14",
+      "spendUsd": 33.62,
+      "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-15",
+      "spendUsd": 66.6,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-15",
+      "spendUsd": 7.3,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-15",
+      "spendUsd": 65.95,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251887419660024",
+      "campaignName": "Еда - Whatsapp",
+      "date": "2026-09-15",
+      "spendUsd": 25.25,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252005126620024",
+      "campaignName": "Подключашка - Лиды квиз",
+      "date": "2026-09-15",
+      "spendUsd": 4.57,
+      "leads": 3
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-16",
+      "spendUsd": 61.4,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-16",
+      "spendUsd": 6.89,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-16",
+      "spendUsd": 39.23,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252005126620024",
+      "campaignName": "Подключашка - Лиды квиз",
+      "date": "2026-09-16",
+      "spendUsd": 14.83,
+      "leads": 7
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-17",
+      "spendUsd": 54.51,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-17",
+      "spendUsd": 7.91,
+      "leads": 1
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-17",
+      "spendUsd": 35.1,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252005126620024",
+      "campaignName": "Подключашка - Лиды квиз",
+      "date": "2026-09-17",
+      "spendUsd": 24.69,
+      "leads": 15
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-18",
+      "spendUsd": 40.74,
+      "leads": 0
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-18",
+      "spendUsd": 3.93,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-18",
+      "spendUsd": 18.76,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252005126620024",
+      "campaignName": "Подключашка - Лиды квиз",
+      "date": "2026-09-18",
+      "spendUsd": 19.65,
+      "leads": 2
     }
   ],
   "activeCampaigns": [
