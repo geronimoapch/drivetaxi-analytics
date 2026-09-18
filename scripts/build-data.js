@@ -1,5 +1,8 @@
 // Сводит raw-google-ads.json + raw-meta-ads.json + raw-amocrm.json в один
 // файл data/data.json, который читает дашборд (index.html).
+//
+// Google Ads и Meta Ads отдают расход и бюджет в долларах (валюта рекламных
+// кабинетов) — оставляем как есть, без пересчёта в тенге.
 
 const fs = require('fs');
 const path = require('path');
@@ -21,23 +24,25 @@ function main() {
   const meta = readJson('raw-meta-ads.json', { rows: [] }).rows;
   const amo = readJson('raw-amocrm.json', { rows: [] }).rows;
 
-  // --- Итоги по каналам (для таблицы "Эффективность по каналам") ---
+  // --- Итоги по каналам (для таблицы "Эффективность по каналам"), в долларах ---
   const channels = {
     google: {
       name: 'Google Ads',
-      spend: sum(google, (r) => r.costTenge),
+      currency: 'USD',
+      spend: sum(google, (r) => r.costUsd),
       dailyBudget: sum(
         [...new Map(google.map((r) => [r.campaignId, r])).values()],
-        (r) => r.dailyBudgetTenge
+        (r) => r.dailyBudgetUsd
       ),
       leads: sum(google, (r) => r.conversions),
     },
     meta: {
       name: 'Meta Ads',
-      spend: sum(meta, (r) => r.spendTenge),
+      currency: 'USD',
+      spend: sum(meta, (r) => r.spendUsd),
       dailyBudget: sum(
         [...new Map(meta.map((r) => [r.campaignId, r])).values()],
-        (r) => r.dailyBudgetTenge
+        (r) => r.dailyBudgetUsd
       ),
       leads: sum(meta, (r) => r.leads),
     },
