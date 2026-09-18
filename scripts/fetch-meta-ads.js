@@ -1,6 +1,7 @@
-// Забирает расход и лиды (results) по кампаниям Meta Ads за последние 30 дней
-// (для истории/CPL), и ОТДЕЛЬНО — дневной бюджет по всем кампаниям, которые
-// включены ПРЯМО СЕЙЧАС (не зависит от того, были ли у них траты за 30 дней —
+// Забирает расход и лиды (results) по дням по кампаниям Meta Ads с начала
+// прошлого месяца по сегодня (этого хватает на пресеты "сегодня/вчера/7 дней/
+// этот месяц/прошлый месяц" в дашборде), и ОТДЕЛЬНО — дневной бюджет по всем
+// кампаниям, которые включены ПРЯМО СЕЙЧАС (не зависит от истории трат —
 // иначе только что созданная кампания просто выпадает из расчёта бюджета).
 // Сохраняет всё в data/raw-meta-ads.json.
 //
@@ -37,7 +38,7 @@ async function fetchInsights() {
   ].join(',');
 
   const url = `https://graph.facebook.com/${API_VERSION}/${META_AD_ACCOUNT_ID}/insights` +
-    `?level=campaign&time_range={"since":"${last30DaysAgo()}","until":"${today()}"}` +
+    `?level=campaign&time_range={"since":"${firstDayOfPreviousMonth()}","until":"${today()}"}` +
     `&time_increment=1&fields=${fields}&access_token=${META_ACCESS_TOKEN}`;
 
   const r = await fetch(url);
@@ -73,9 +74,12 @@ async function fetchActiveAdsets() {
 function today() {
   return new Date().toISOString().slice(0, 10);
 }
-function last30DaysAgo() {
+// Первое число прошлого месяца — с запасом хватает на пресеты "этот месяц"
+// и "прошлый месяц" в дашборде.
+function firstDayOfPreviousMonth() {
   const d = new Date();
-  d.setDate(d.getDate() - 30);
+  d.setUTCDate(1);
+  d.setUTCMonth(d.getUTCMonth() - 1);
   return d.toISOString().slice(0, 10);
 }
 
