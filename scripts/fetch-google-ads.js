@@ -88,7 +88,9 @@ async function runQuery(accessToken, query) {
   const allResults = [];
   let pageToken = null;
   do {
-    const body = { query, pageSize: 10000 };
+    // pageSize здесь не задаём — Google Ads API сам фиксирует размер страницы
+    // (10000 строк) и ругается, если его переопределять.
+    const body = { query };
     if (pageToken) body.pageToken = pageToken;
     const r = await fetch(url, {
       method: 'POST',
