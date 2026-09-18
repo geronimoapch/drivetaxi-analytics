@@ -1,5 +1,10 @@
-// Забирает расход, лиды (конверсии) и дневной бюджет по кампаниям Google Ads
-// за последние 30 дней и сохраняет сырые данные в data/raw-google-ads.json.
+// Забирает расход и лиды (конверсии) по дням по кампаниям Google Ads с начала
+// прошлого месяца по сегодня (этого хватает на пресеты "сегодня/вчера/7 дней/
+// этот месяц/прошлый месяц" в дашборде), и ОТДЕЛЬНО — дневной бюджет по всем
+// кампаниям, которые включены ПРЯМО СЕЙЧАС (не зависит от истории показов —
+// иначе только что созданная кампания выпадает из расчёта бюджета).
+// Сохраняет всё в data/raw-google-ads.json.
+//
 // Важно: цифры приходят от Google в валюте самого рекламного аккаунта (у нас
 // это доллары), поэтому поля называются costUsd / dailyBudgetUsd. Дашборд
 // показывает суммы как есть, в долларах, без перевода в тенге.
@@ -24,6 +29,23 @@ const {
   GOOGLE_ADS_LOGIN_CUSTOMER_ID,
 } = process.env;
 
+const API_VERSION = 'v24';
+
+function isoDate(d) {
+  return d.toISOString().slice(0, 10);
+}
+function todayIso() {
+  return isoDate(new Date());
+}
+// Первое число прошлого месяца — с запасом хватает на пресеты
+// "этот месяц" и "прошлый месяц" в дашборде.
+function firstDayOfPreviousMonthIso() {
+  const d = new Date();
+  d.setUTCDate(1);
+  d.setUTCMonth(d.getUTCMonth() - 1);
+  return isoDate(d);
+}
+
 async function getAccessToken() {
   const params = new URLSearchParams({
     client_id: GOOGLE_ADS_CLIENT_ID,
@@ -47,21 +69,8 @@ async function getAccessToken() {
   return d.access_token;
 }
 
-async function fetchCampaignStats(accessToken) {
-  const query = `
-    SELECT
-      campaign.id,
-      campaign.name,
-      campaign_budget.amount_micros,
-      metrics.cost_micros,
-      metrics.conversions,
-      segments.date
-    FROM campaign
-    WHERE segments.date DURING LAST_30_DAYS
-      AND campaign.status != 'REMOVED'
-  `;
-
-  const url = `https://googleads.googleapis.com/v24/customers/${GOOGLE_ADS_CUSTOMER_ID}/googleAds:search`;
+async function runQuery(accessToken, query) {
+  const url = `https://googleads.googleapis.com/${API_VERSION}/customers/${GOOGLE_ADS_CUSTOMER_ID}/googleAds:search`;
   const headers = {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${accessToken}`,
@@ -88,31 +97,82 @@ async function fetchCampaignStats(accessToken) {
   return d.results || [];
 }
 
+// Расход и конверсии по дням — начиная с прошлого месяца.
+async function fetchDailyStats(accessToken) {
+  const since = firstDayOfPreviousMonthIso();
+  const until = todayIso();
+  const query = `
+    SELECT
+      campaign.id,
+      campaign.name,
+      metrics.cost_micros,
+      metrics.conversions,
+      segments.date
+    FROM campaign
+    WHERE segments.date BETWEEN '${since}' AND '${until}'
+      AND campaign.status != 'REMOVED'
+  `;
+  return runQuery(accessToken, query);
+}
+
+// Бюджет по кампаниям, которые включены ПРЯМО СЕЙЧАС — отдельно от статистики
+// по дням, чтобы новая кампания без истории показов не выпадала из расчёта.
+async function fetchActiveCampaignBudgets(accessToken) {
+  const query = `
+    SELECT
+      campaign.id,
+      campaign.name,
+      campaign.status,
+      campaign_budget.amount_micros
+    FROM campaign
+    WHERE campaign.status = 'ENABLED'
+  `;
+  return runQuery(accessToken, query);
+}
+
 async function main() {
   if (!GOOGLE_ADS_DEVELOPER_TOKEN || !GOOGLE_ADS_CLIENT_ID || !GOOGLE_ADS_REFRESH_TOKEN || !GOOGLE_ADS_CUSTOMER_ID) {
     console.error('Не заданы переменные окружения для Google Ads — пропускаю сбор (заполните Secrets в репозитории).');
-    fs.writeFileSync(path.join(__dirname, '..', 'data', 'raw-google-ads.json'), JSON.stringify({ rows: [], skipped: true }, null, 2));
+    fs.mkdirSync(path.join(__dirname, '..', 'data'), { recursive: true });
+    fs.writeFileSync(path.join(__dirname, '..', 'data', 'raw-google-ads.json'), JSON.stringify({ rows: [], activeCampaigns: [], totalActiveDailyBudgetUsd: 0, skipped: true }, null, 2));
     return;
   }
 
   const accessToken = await getAccessToken();
-  const rows = await fetchCampaignStats(accessToken);
+  const [statsRows, budgetRows] = await Promise.all([
+    fetchDailyStats(accessToken),
+    fetchActiveCampaignBudgets(accessToken),
+  ]);
 
-  const normalized = rows.map((r) => ({
+  const rows = statsRows.map((r) => ({
     campaignId: r.campaign.id,
     campaignName: r.campaign.name,
     date: r.segments.date,
     costUsd: Number(r.metrics.costMicros || 0) / 1_000_000,
     conversions: Number(r.metrics.conversions || 0),
+  }));
+
+  const activeCampaigns = budgetRows.map((r) => ({
+    campaignId: r.campaign.id,
+    campaignName: r.campaign.name,
+    status: r.campaign.status,
     dailyBudgetUsd: Number(r.campaignBudget?.amountMicros || 0) / 1_000_000,
   }));
+
+  const totalActiveDailyBudgetUsd = activeCampaigns.reduce((acc, c) => acc + c.dailyBudgetUsd, 0);
+
+  console.log('Активные кампании Google и их дневной бюджет:');
+  activeCampaigns.forEach((c) => {
+    console.log(`  - ${c.campaignName} (${c.campaignId}): $${c.dailyBudgetUsd} [${c.status}]`);
+  });
+  console.log(`Итого дневной бюджет по активным кампаниям Google: $${totalActiveDailyBudgetUsd}`);
 
   fs.mkdirSync(path.join(__dirname, '..', 'data'), { recursive: true });
   fs.writeFileSync(
     path.join(__dirname, '..', 'data', 'raw-google-ads.json'),
-    JSON.stringify({ rows: normalized, skipped: false }, null, 2)
+    JSON.stringify({ rows, activeCampaigns, totalActiveDailyBudgetUsd, skipped: false }, null, 2)
   );
-  console.log(`Google Ads: сохранено ${normalized.length} строк.`);
+  console.log(`Google Ads: сохранено ${rows.length} строк расхода/конверсий и ${activeCampaigns.length} активных кампаний.`);
 }
 
 main().catch((e) => {
