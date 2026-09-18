@@ -2,112 +2,112 @@
   "rows": [
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-02",
       "costUsd": 16.262884,
       "conversions": 4
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-03",
       "costUsd": 20.171948,
       "conversions": 3
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-04",
       "costUsd": 14.028242,
       "conversions": 2
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-05",
       "costUsd": 14.728306,
       "conversions": 0
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-07",
       "costUsd": 67.640949,
       "conversions": 4
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-08",
       "costUsd": 19.967614,
       "conversions": 6
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-09",
       "costUsd": 20.595842,
       "conversions": 7
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-10",
       "costUsd": 21.489922,
       "conversions": 4
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-11",
       "costUsd": 22.029975,
       "conversions": 3.15
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-12",
       "costUsd": 22.924809,
       "conversions": 4.6
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-13",
       "costUsd": 21.393181,
       "conversions": 4.5
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-14",
       "costUsd": 40.537524,
       "conversions": 4.75
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-15",
       "costUsd": 40.490271,
       "conversions": 2.75
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-16",
       "costUsd": 41.256314,
       "conversions": 1
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-17",
       "costUsd": 40.94,
       "conversions": 5
     },
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "date": "2026-09-18",
       "costUsd": 26.549376,
       "conversions": 5
@@ -226,7 +226,7 @@
     },
     {
       "campaignId": "24245392071",
-      "campaignName": "Подключашка | КВИЗ - ВЕСЬ КЗ",
+      "campaignName": "Подключашка - КВИЗ ВЕСЬ КЗ",
       "date": "2026-09-18",
       "costUsd": 8.81,
       "conversions": 0
@@ -282,28 +282,28 @@
     },
     {
       "campaignId": "24250427489",
-      "campaignName": "Подключашка | Шымкент",
+      "campaignName": "Подключашка - Шымкент",
       "date": "2026-09-15",
       "costUsd": 4.45,
       "conversions": 0
     },
     {
       "campaignId": "24250427489",
-      "campaignName": "Подключашка | Шымкент",
+      "campaignName": "Подключашка - Шымкент",
       "date": "2026-09-16",
       "costUsd": 0.78,
       "conversions": 0
     },
     {
       "campaignId": "24250427489",
-      "campaignName": "Подключашка | Шымкент",
+      "campaignName": "Подключашка - Шымкент",
       "date": "2026-09-17",
       "costUsd": 0.72,
       "conversions": 0
     },
     {
       "campaignId": "24250427489",
-      "campaignName": "Подключашка | Шымкент",
+      "campaignName": "Подключашка - Шымкент",
       "date": "2026-09-18",
       "costUsd": 0.4,
       "conversions": 0
@@ -410,7 +410,7 @@
   "activeCampaigns": [
     {
       "campaignId": "24206794720",
-      "campaignName": "Аренда авто",
+      "campaignName": "Аренда - Алматы",
       "status": "ENABLED",
       "dailyBudgetUsd": 40
     }
