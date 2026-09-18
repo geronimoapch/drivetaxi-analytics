@@ -56,7 +56,7 @@ async function fetchAdsetDailyBudgets() {
   if (!r.ok || d.error) throw new Error('Meta API error (adset budgets): ' + JSON.stringify(d.error || d));
   const sumByCampaign = {};
   (d.data || []).forEach((a) => {
-    const budget = Number(a.daily_budget || 0);
+    const budget = Number(a.daily_budget || 0) / 100; // тоже центы
     if (!budget) return;
     sumByCampaign[a.campaign_id] = (sumByCampaign[a.campaign_id] || 0) + budget;
   });
@@ -91,8 +91,9 @@ async function main() {
     fetchDailyBudgets(),
     fetchAdsetDailyBudgets(),
   ]);
+  // Meta отдаёт daily_budget в центах, а не в долларах — делим на 100.
   const budgetByCampaign = {};
-  budgets.forEach((b) => { budgetByCampaign[b.id] = Number(b.daily_budget || 0); });
+  budgets.forEach((b) => { budgetByCampaign[b.id] = Number(b.daily_budget || 0) / 100; });
 
   const normalized = insights.map((r) => ({
     campaignId: r.campaign_id,
