@@ -1019,7 +1019,14 @@
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "date": "2026-09-19",
-      "spendUsd": 13.42,
+      "spendUsd": 16.92,
+      "leads": 0
+    },
+    {
+      "campaignId": "120251780625740024",
+      "campaignName": "Подключашка - Whatsapp",
+      "date": "2026-09-19",
+      "spendUsd": 0,
       "leads": 0
     }
   ],
