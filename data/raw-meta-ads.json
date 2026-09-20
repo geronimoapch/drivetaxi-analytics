@@ -1028,6 +1028,13 @@
       "date": "2026-09-19",
       "spendUsd": 0,
       "leads": 0
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-20",
+      "spendUsd": 6.32,
+      "leads": 0
     }
   ],
   "activeCampaigns": [
