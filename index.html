@@ -48,6 +48,42 @@
 
   .section-title { font-size: 15px; font-weight: 600; margin: 28px 0 10px; }
 
+  .expand-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px 0 0;
+    font-size: 11px;
+    color: var(--muted);
+    display: inline-block;
+    transition: transform 0.15s ease;
+    vertical-align: middle;
+  }
+  .expand-btn.open { transform: rotate(90deg); }
+  tr.channel-row td:first-child { cursor: pointer; }
+  tr.subcategory-row { display: none; }
+  tr.subcategory-row.open { display: table-row; }
+  tr.subcategory-row td {
+    padding: 0;
+    background: var(--bg);
+  }
+  .subtable {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 13px;
+  }
+  .subtable td, .subtable th {
+    padding: 8px 14px 8px 34px;
+    border-bottom: 1px solid var(--border);
+  }
+  .subtable tr:last-child td { border-bottom: none; }
+  .subtable td.num, .subtable th.num { text-align: right; }
+  .subtable td:first-child { color: var(--muted); }
+
   .periods {
     display: flex;
     flex-wrap: wrap;
@@ -178,20 +214,6 @@
       <tbody id="table-body"></tbody>
     </table>
 
-    <div class="section-title">По направлениям</div>
-    <table>
-      <thead>
-        <tr>
-          <th>Направление</th>
-          <th class="num">Лиды</th>
-          <th class="num">Потрачено, $</th>
-          <th class="num">Цена за лид, $</th>
-          <th class="num">Дневной лимит, $</th>
-        </tr>
-      </thead>
-      <tbody id="category-table-body"></tbody>
-    </table>
-
     <p class="status" id="raw-toggle-line"><a href="#" id="raw-toggle">Показать сырые данные</a></p>
     <pre id="raw" style="display:none; font-size:12px; white-space:pre-wrap; background:#fff; border:1px solid var(--border); border-radius:12px; padding:16px;"></pre>
   </div>
@@ -277,6 +299,10 @@ let currentPreset = 'today';
 let customStart = null;
 let customEnd = null;
 
+// Сохраняем, какие раскрывающиеся списки были открыты, чтобы при смене
+// периода (клик по пресету) открытые каналы не схлопывались обратно.
+const openChannels = new Set();
+
 function render(data) {
   const [start, end] = getRangeForPreset(currentPreset, customStart, customEnd);
 
@@ -284,7 +310,17 @@ function render(data) {
   const rows = Object.keys(channels).map((key) => {
     const ch = channels[key];
     const { spend, leads } = sumRange(ch.daily, start, end);
-    return { name: ch.name, spend, leads, dailyBudget: ch.dailyBudget || 0 };
+
+    const categories = ch.categories || {};
+    const categoryRows = Object.keys(categories)
+      .map((catKey) => {
+        const c = categories[catKey];
+        const { spend: catSpend, leads: catLeads } = sumRange(c.daily, start, end);
+        return { name: c.name, spend: catSpend, leads: catLeads, dailyBudget: c.dailyBudget || 0 };
+      })
+      .sort((a, b) => b.spend - a.spend);
+
+    return { key, name: ch.name, spend, leads, dailyBudget: ch.dailyBudget || 0, categoryRows };
   });
 
   const totalSpend = rows.reduce((a, r) => a + r.spend, 0);
@@ -313,17 +349,38 @@ function render(data) {
     </div>
   `;
 
-  // Таблица по каналам.
+  // Таблица по каналам — у каждого канала строка со стрелкой, разворачивающая
+  // список направлений (Аренда/Подключашка/Инвест/Еда) именно этого канала.
   const tbody = document.getElementById('table-body');
-  tbody.innerHTML = rows.map((r) => `
-    <tr>
-      <td>${r.name}</td>
-      <td class="num">${r.leads}</td>
-      <td class="num">$${fmtMoney(r.spend)}</td>
-      <td class="num">$${fmtCpl(r.spend, r.leads)}</td>
-      <td class="num">$${fmtMoney(r.dailyBudget)}</td>
-    </tr>
-  `).join('') + `
+  tbody.innerHTML = rows.map((r) => {
+    const isOpen = openChannels.has(r.key);
+    const subRows = r.categoryRows.map((c) => `
+      <tr>
+        <td>${c.name}</td>
+        <td class="num">${c.leads}</td>
+        <td class="num">$${fmtMoney(c.spend)}</td>
+        <td class="num">$${fmtCpl(c.spend, c.leads)}</td>
+        <td class="num">$${fmtMoney(c.dailyBudget)}</td>
+      </tr>
+    `).join('') || `<tr><td colspan="5" style="color:var(--muted); padding-left:34px;">Нет данных по направлениям</td></tr>`;
+
+    return `
+      <tr class="channel-row" data-channel-key="${r.key}">
+        <td><button class="expand-btn${isOpen ? ' open' : ''}" data-channel-key="${r.key}">▶</button>${r.name}</td>
+        <td class="num">${r.leads}</td>
+        <td class="num">$${fmtMoney(r.spend)}</td>
+        <td class="num">$${fmtCpl(r.spend, r.leads)}</td>
+        <td class="num">$${fmtMoney(r.dailyBudget)}</td>
+      </tr>
+      <tr class="subcategory-row${isOpen ? ' open' : ''}" data-channel-key="${r.key}">
+        <td colspan="5">
+          <table class="subtable">
+            <tbody>${subRows}</tbody>
+          </table>
+        </td>
+      </tr>
+    `;
+  }).join('') + `
     <tr class="total-row">
       <td>Итого</td>
       <td class="num">${totalLeads}</td>
@@ -333,34 +390,31 @@ function render(data) {
     </tr>
   `;
 
+  tbody.querySelectorAll('.expand-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleChannel(btn.dataset.channelKey);
+    });
+  });
+  tbody.querySelectorAll('tr.channel-row').forEach((tr) => {
+    tr.addEventListener('click', () => toggleChannel(tr.dataset.channelKey));
+  });
+
+  function toggleChannel(key) {
+    if (openChannels.has(key)) {
+      openChannels.delete(key);
+    } else {
+      openChannels.add(key);
+    }
+    const btn = tbody.querySelector(`.expand-btn[data-channel-key="${key}"]`);
+    const subRow = tbody.querySelector(`tr.subcategory-row[data-channel-key="${key}"]`);
+    if (btn) btn.classList.toggle('open');
+    if (subRow) subRow.classList.toggle('open');
+  }
+
   document.getElementById('updated-line').textContent =
     'Данные обновлены: ' + new Date(data.generatedAt).toLocaleString('ru') +
     ` · период: ${start === end ? start : start + ' — ' + end}`;
-
-  // Таблица по направлениям (Аренда/Подключашка/Инвест/Еда и т.д.) — считается
-  // так же, за тот же выбранный период, просто источник данных другой (categories,
-  // где Google и Meta по одному направлению уже сложены вместе).
-  const categories = data.categories || {};
-  const catRows = Object.keys(categories)
-    .map((key) => {
-      const c = categories[key];
-      const { spend, leads } = sumRange(c.daily, start, end);
-      return { name: c.name, spend, leads, dailyBudget: c.dailyBudget || 0 };
-    })
-    .sort((a, b) => b.spend - a.spend);
-
-  const catBody = document.getElementById('category-table-body');
-  if (catBody) {
-    catBody.innerHTML = catRows.map((r) => `
-      <tr>
-        <td>${r.name}</td>
-        <td class="num">${r.leads}</td>
-        <td class="num">$${fmtMoney(r.spend)}</td>
-        <td class="num">$${fmtCpl(r.spend, r.leads)}</td>
-        <td class="num">$${fmtMoney(r.dailyBudget)}</td>
-      </tr>
-    `).join('');
-  }
 }
 
 function buildPeriodButtons(data) {
