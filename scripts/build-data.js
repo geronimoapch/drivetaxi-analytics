@@ -45,14 +45,57 @@ function toDailySeriesFromUnified(rows) {
   return Object.values(byDate).sort((a, b) => (a.date < b.date ? -1 : 1));
 }
 
-// Направление — это текст до " - " в названии кампании, например
-// "Аренда - WhatsApp" -> "Аренда". Если разделителя нет, вся кампания
-// считается отдельным направлением (по своему полному имени), чтобы ничего
-// не терялось из дашборда, пока не все кампании переименованы по конвенции.
+// Известные направления бизнеса. Ищем эти слова ГДЕ УГОДНО в названии
+// кампании (регистр не важен) — на практике название может быть построено
+// по-разному: "Аренда - Поиск", "Подключашка | Алматы",
+// "Drive Taxi | Подключашка | KZ" и т.п., и слово-направление не всегда
+// стоит первым.
+const KNOWN_CATEGORIES = ['Аренда', 'Подключашка', 'Инвест', 'Еда'];
+
 function categoryFromName(name) {
   if (!name) return 'Без направления';
-  const idx = name.indexOf(' - ');
-  return idx === -1 ? name.trim() : name.slice(0, idx).trim();
+  const lower = name.toLowerCase();
+  const found = KNOWN_CATEGORIES.find((cat) => lower.includes(cat.toLowerCase()));
+  if (found) return found;
+
+  // Название не содержит ни одно известное направление — пробуем разделители
+  // " - " или " | ", берём первый кусок, чтобы хотя бы похожие кампании
+  // сгруппировались между собой (например, все "Яндекс ..." вместе).
+  const sepMatch = name.match(/\s[-|]\s/);
+  if (sepMatch) return name.slice(0, sepMatch.index).trim();
+
+  return name.trim();
+}
+
+// Строит разбивку по направлениям (Аренда/Подключашка/Инвест/Еда) ВНУТРИ
+// одного канала — то есть только по его собственным строкам/кампаниям, без
+// смешивания с другим каналом. Используется отдельно для Google и для Meta,
+// чтобы под каждым каналом дашборд мог показать свой раскрывающийся список
+// направлений с корректным per-канальным дневным лимитом.
+function buildCategoriesForChannel(rows, activeCampaigns, spendField, leadsField) {
+  const rowsByCategory = {};
+  (rows || []).forEach((r) => {
+    const cat = categoryFromName(r.campaignName);
+    if (!rowsByCategory[cat]) rowsByCategory[cat] = [];
+    rowsByCategory[cat].push({ date: r.date, spend: r[spendField], leads: r[leadsField] });
+  });
+
+  const activeBudgetByCategory = {};
+  (activeCampaigns || []).forEach((c) => {
+    const cat = categoryFromName(c.campaignName);
+    activeBudgetByCategory[cat] = (activeBudgetByCategory[cat] || 0) + Number(c.dailyBudgetUsd || 0);
+  });
+
+  const categoryNames = new Set([...Object.keys(rowsByCategory), ...Object.keys(activeBudgetByCategory)]);
+  const categories = {};
+  categoryNames.forEach((cat) => {
+    categories[cat] = {
+      name: cat,
+      dailyBudget: activeBudgetByCategory[cat] || 0,
+      daily: toDailySeriesFromUnified(rowsByCategory[cat] || []),
+    };
+  });
+  return categories;
 }
 
 function main() {
@@ -66,56 +109,16 @@ function main() {
       currency: 'USD',
       dailyBudget: googleRaw.totalActiveDailyBudgetUsd || 0,
       daily: toDailySeries(googleRaw.rows || [], 'costUsd', 'conversions'),
+      categories: buildCategoriesForChannel(googleRaw.rows, googleRaw.activeCampaigns, 'costUsd', 'conversions'),
     },
     meta: {
       name: 'Meta Ads',
       currency: 'USD',
       dailyBudget: metaRaw.totalActiveDailyBudgetUsd || 0,
       daily: toDailySeries(metaRaw.rows || [], 'spendUsd', 'leads'),
+      categories: buildCategoriesForChannel(metaRaw.rows, metaRaw.activeCampaigns, 'spendUsd', 'leads'),
     },
   };
-
-  // --- Разбивка по направлениям (Аренда/Подключашка/Инвест/Еда и т.д.) ---
-  // Объединяем построчные данные Google + Meta в общий вид { date, spend, leads, category },
-  // группируем по направлению, и для каждого направления считаем поднедельный ряд
-  // + текущий дневной лимит (только по активным прямо сейчас кампаниям/группам).
-  const unifiedRows = [
-    ...(googleRaw.rows || []).map((r) => ({
-      date: r.date,
-      spend: r.costUsd,
-      leads: r.conversions,
-      category: categoryFromName(r.campaignName),
-    })),
-    ...(metaRaw.rows || []).map((r) => ({
-      date: r.date,
-      spend: r.spendUsd,
-      leads: r.leads,
-      category: categoryFromName(r.campaignName),
-    })),
-  ];
-
-  const rowsByCategory = {};
-  unifiedRows.forEach((r) => {
-    if (!rowsByCategory[r.category]) rowsByCategory[r.category] = [];
-    rowsByCategory[r.category].push(r);
-  });
-
-  const activeBudgetByCategory = {};
-  [...(googleRaw.activeCampaigns || []), ...(metaRaw.activeCampaigns || [])].forEach((c) => {
-    const cat = categoryFromName(c.campaignName);
-    activeBudgetByCategory[cat] = (activeBudgetByCategory[cat] || 0) + Number(c.dailyBudgetUsd || 0);
-  });
-
-  const categoryNames = new Set([...Object.keys(rowsByCategory), ...Object.keys(activeBudgetByCategory)]);
-  const categories = {};
-  categoryNames.forEach((cat) => {
-    categories[cat] = {
-      name: cat,
-      currency: 'USD',
-      dailyBudget: activeBudgetByCategory[cat] || 0,
-      daily: toDailySeriesFromUnified(rowsByCategory[cat] || []),
-    };
-  });
 
   // --- Сделки amoCRM: по этапам воронки (как на скрине CRM) ---
   const stageCounts = {};
@@ -142,7 +145,6 @@ function main() {
   const output = {
     generatedAt: new Date().toISOString(),
     channels,
-    categories,
     crm: {
       totalDeals,
       totalQualified,
@@ -152,7 +154,13 @@ function main() {
   };
 
   fs.writeFileSync(path.join(dataDir, 'data.json'), JSON.stringify(output, null, 2));
-  console.log('data.json собран. Каналы:', Object.keys(channels).join(', '), '| направления:', Object.keys(categories).join(', '), '| дней данных Google:', channels.google.daily.length, '| дней данных Meta:', channels.meta.daily.length);
+  console.log(
+    'data.json собран. Каналы:', Object.keys(channels).join(', '),
+    '| направления Google:', Object.keys(channels.google.categories).join(', '),
+    '| направления Meta:', Object.keys(channels.meta.categories).join(', '),
+    '| дней данных Google:', channels.google.daily.length,
+    '| дней данных Meta:', channels.meta.daily.length
+  );
 }
 
 main();
