@@ -91,10 +91,31 @@ function firstDayOfPreviousMonth() {
   return d.toISOString().slice(0, 10);
 }
 
+// "Лид" у нас — это ЛЮБОЙ основной результат кампании, а не только форма на
+// сайте: часть кампаний (Аренда, Еда, часть Подключашка) настроены на цель
+// "Начало переписки в WhatsApp" (в Ads Manager это колонка "Начало
+// переписки"), и там в actions приходит НЕ 'lead', а
+// 'onsite_conversion.messaging_conversation_started_7d'. Раньше эти кампании
+// считались с нулём лидов, хотя деньги тратились и переписки реально
+// начинались — отсюда расхождение с Ads Manager.
+// Берём первый найденный тип из списка (по приоритету), а не суммируем все —
+// иначе можно задвоить один и тот же результат, посчитанный в разных окнах
+// атрибуции.
+const LEAD_ACTION_TYPES = [
+  'lead',
+  'offsite_conversion.fb_pixel_lead',
+  'onsite_conversion.messaging_conversation_started_7d',
+  'onsite_conversion.messaging_conversation_started_28d',
+  'onsite_conversion.messaging_first_reply',
+];
+
 function extractLeads(actions) {
   if (!Array.isArray(actions)) return 0;
-  const leadAction = actions.find((a) => a.action_type === 'lead' || a.action_type === 'offsite_conversion.fb_pixel_lead');
-  return leadAction ? Number(leadAction.value) : 0;
+  for (const type of LEAD_ACTION_TYPES) {
+    const found = actions.find((a) => a.action_type === type);
+    if (found) return Number(found.value) || 0;
+  }
+  return 0;
 }
 
 // Центы -> доллары.

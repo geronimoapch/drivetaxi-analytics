@@ -98,23 +98,48 @@ function buildCategoriesForChannel(rows, activeCampaigns, spendField, leadsField
   return categories;
 }
 
+// Кампании, которые полностью исключаем из дашборда (не текущие продукты,
+// не должны попадать никуда — ни в общий расход канала, ни в направления).
+// Ищем ключевое слово где угодно в названии, регистр не важен.
+const EXCLUDED_KEYWORDS = ['алишер'];
+
+function isExcludedCampaign(name) {
+  if (!name) return false;
+  const lower = name.toLowerCase();
+  return EXCLUDED_KEYWORDS.some((kw) => lower.includes(kw));
+}
+
+function filterExcludedCampaigns(raw) {
+  return {
+    ...raw,
+    rows: (raw.rows || []).filter((r) => !isExcludedCampaign(r.campaignName)),
+    activeCampaigns: (raw.activeCampaigns || []).filter((c) => !isExcludedCampaign(c.campaignName)),
+  };
+}
+
 function main() {
-  const googleRaw = readJson('raw-google-ads.json', { rows: [] });
-  const metaRaw = readJson('raw-meta-ads.json', { rows: [] });
+  const googleRaw = filterExcludedCampaigns(readJson('raw-google-ads.json', { rows: [] }));
+  const metaRaw = filterExcludedCampaigns(readJson('raw-meta-ads.json', { rows: [] }));
   const amo = readJson('raw-amocrm.json', { rows: [] }).rows;
+
+  // Пересчитываем дневной бюджет канала ПОСЛЕ исключения кампаний — нельзя
+  // брать готовую сумму totalActiveDailyBudgetUsd из raw-файла, она считалась
+  // ДО фильтрации и включала бы бюджет исключённых кампаний.
+  const sumActiveBudget = (activeCampaigns) =>
+    (activeCampaigns || []).reduce((acc, c) => acc + Number(c.dailyBudgetUsd || 0), 0);
 
   const channels = {
     google: {
       name: 'Google Ads',
       currency: 'USD',
-      dailyBudget: googleRaw.totalActiveDailyBudgetUsd || 0,
+      dailyBudget: sumActiveBudget(googleRaw.activeCampaigns),
       daily: toDailySeries(googleRaw.rows || [], 'costUsd', 'conversions'),
       categories: buildCategoriesForChannel(googleRaw.rows, googleRaw.activeCampaigns, 'costUsd', 'conversions'),
     },
     meta: {
       name: 'Meta Ads',
       currency: 'USD',
-      dailyBudget: metaRaw.totalActiveDailyBudgetUsd || 0,
+      dailyBudget: sumActiveBudget(metaRaw.activeCampaigns),
       daily: toDailySeries(metaRaw.rows || [], 'spendUsd', 'leads'),
       categories: buildCategoriesForChannel(metaRaw.rows, metaRaw.activeCampaigns, 'spendUsd', 'leads'),
     },

@@ -74,15 +74,26 @@
     border: none;
     border-radius: 0;
     box-shadow: none;
-    font-size: 13px;
+    font-size: 14px;
   }
   .subtable td, .subtable th {
-    padding: 8px 14px 8px 34px;
+    padding: 10px 14px;
     border-bottom: 1px solid var(--border);
   }
+  .subtable td:first-child, .subtable th:first-child { padding-left: 34px; }
   .subtable tr:last-child td { border-bottom: none; }
   .subtable td.num, .subtable th.num { text-align: right; }
   .subtable td:first-child { color: var(--muted); }
+
+  /* Фиксированная ширина колонок — одинаковая у главной таблицы и у вложенной
+     таблицы направлений внутри неё, иначе браузер считает ширины колонок
+     каждой таблицы отдельно и цифры "плывут" относительно друг друга. */
+  table, .subtable { table-layout: fixed; }
+  .col-name { width: 40%; }
+  .col-leads { width: 14%; }
+  .col-spend { width: 18%; }
+  .col-cpl { width: 14%; }
+  .col-budget { width: 14%; }
 
   .periods {
     display: flex;
@@ -202,6 +213,9 @@
     <div class="cards" id="cards"></div>
 
     <table>
+      <colgroup>
+        <col class="col-name"><col class="col-leads"><col class="col-spend"><col class="col-cpl"><col class="col-budget">
+      </colgroup>
       <thead>
         <tr>
           <th>Канал</th>
@@ -259,8 +273,13 @@ function getRangeForPreset(preset, customStart, customEnd) {
       const y = isoDate(addDays(today, -1));
       return [y, y];
     }
-    case 'last7':
-      return [isoDate(addDays(today, -6)), todayIso];
+    case 'last7': {
+      // "Последние 7 дней" — это законченная неделя ПО ВЧЕРАШНИЙ день
+      // включительно, без сегодняшнего (у сегодня ещё не собрана полная
+      // статистика за день, она бы искажала сравнение).
+      const yesterday = addDays(today, -1);
+      return [isoDate(addDays(yesterday, -6)), isoDate(yesterday)];
+    }
     case 'thisMonth':
       return [isoDate(startOfMonth(today)), todayIso];
     case 'lastMonth': {
@@ -375,6 +394,9 @@ function render(data) {
       <tr class="subcategory-row${isOpen ? ' open' : ''}" data-channel-key="${r.key}">
         <td colspan="5">
           <table class="subtable">
+            <colgroup>
+              <col class="col-name"><col class="col-leads"><col class="col-spend"><col class="col-cpl"><col class="col-budget">
+            </colgroup>
             <tbody>${subRows}</tbody>
           </table>
         </td>
