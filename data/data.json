@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T07:25:44.984Z",
+  "generatedAt": "2026-09-21T08:05:08.005Z",
   "channels": {
     "google": {
       "name": "Google Ads",
@@ -98,7 +98,7 @@
         },
         {
           "date": "2026-09-21",
-          "spend": 28.547509,
+          "spend": 33.404576,
           "leads": 0
         }
       ],
@@ -199,7 +199,7 @@
             },
             {
               "date": "2026-09-21",
-              "spend": 28.547509,
+              "spend": 33.404576,
               "leads": 0
             }
           ]
@@ -332,52 +332,52 @@
         {
           "date": "2026-08-01",
           "spend": 35.55,
-          "leads": 2
+          "leads": 24
         },
         {
           "date": "2026-08-02",
           "spend": 16.63,
-          "leads": 3
+          "leads": 11
         },
         {
           "date": "2026-08-03",
           "spend": 14.35,
-          "leads": 3
+          "leads": 9
         },
         {
           "date": "2026-08-04",
-          "spend": 62.41,
-          "leads": 0
+          "spend": 62.33,
+          "leads": 35
         },
         {
           "date": "2026-08-05",
           "spend": 94.78,
-          "leads": 5
+          "leads": 41
         },
         {
           "date": "2026-08-06",
           "spend": 51.6,
-          "leads": 2
+          "leads": 33
         },
         {
           "date": "2026-08-07",
           "spend": 52.37,
-          "leads": 1
+          "leads": 23
         },
         {
           "date": "2026-08-08",
           "spend": 16.68,
-          "leads": 0
+          "leads": 11
         },
         {
           "date": "2026-08-09",
           "spend": 27.94,
-          "leads": 0
+          "leads": 30
         },
         {
           "date": "2026-08-10",
           "spend": 40.07,
-          "leads": 0
+          "leads": 28
         },
         {
           "date": "2026-08-11",
@@ -387,207 +387,207 @@
         {
           "date": "2026-08-12",
           "spend": 10.9,
-          "leads": 1
+          "leads": 3
         },
         {
           "date": "2026-08-13",
           "spend": 55.449999999999996,
-          "leads": 4
+          "leads": 31
         },
         {
           "date": "2026-08-14",
           "spend": 58.55,
-          "leads": 3
+          "leads": 31
         },
         {
           "date": "2026-08-15",
           "spend": 35.07,
-          "leads": 4
+          "leads": 11
         },
         {
           "date": "2026-08-16",
           "spend": 40.91,
-          "leads": 0
+          "leads": 22
         },
         {
           "date": "2026-08-17",
           "spend": 35.24,
-          "leads": 2
+          "leads": 26
         },
         {
           "date": "2026-08-18",
           "spend": 16.32,
-          "leads": 3
+          "leads": 6
         },
         {
           "date": "2026-08-19",
           "spend": 47.7,
-          "leads": 2
+          "leads": 25
         },
         {
           "date": "2026-08-20",
           "spend": 61.260000000000005,
-          "leads": 3
+          "leads": 50
         },
         {
           "date": "2026-08-21",
           "spend": 42.870000000000005,
-          "leads": 0
+          "leads": 28
         },
         {
           "date": "2026-08-22",
           "spend": 35.29,
-          "leads": 0
+          "leads": 28
         },
         {
           "date": "2026-08-23",
           "spend": 32.089999999999996,
-          "leads": 0
+          "leads": 25
         },
         {
           "date": "2026-08-24",
           "spend": 60.28,
-          "leads": 2
+          "leads": 29
         },
         {
           "date": "2026-08-25",
           "spend": 86.42,
-          "leads": 3
+          "leads": 33
         },
         {
           "date": "2026-08-26",
           "spend": 66.32000000000001,
-          "leads": 5
+          "leads": 40
         },
         {
           "date": "2026-08-27",
           "spend": 65.97,
-          "leads": 2
+          "leads": 40
         },
         {
           "date": "2026-08-28",
           "spend": 55.09,
-          "leads": 2
+          "leads": 29
         },
         {
           "date": "2026-08-29",
           "spend": 58.419999999999995,
-          "leads": 0
+          "leads": 23
         },
         {
           "date": "2026-08-30",
           "spend": 37.8,
-          "leads": 3
+          "leads": 32
         },
         {
           "date": "2026-08-31",
           "spend": 52.27,
-          "leads": 1
+          "leads": 23
         },
         {
           "date": "2026-09-01",
           "spend": 46.06,
-          "leads": 5
+          "leads": 30
         },
         {
           "date": "2026-09-02",
           "spend": 73.7,
-          "leads": 0
+          "leads": 35
         },
         {
           "date": "2026-09-03",
           "spend": 39.3,
-          "leads": 0
+          "leads": 18
         },
         {
           "date": "2026-09-04",
           "spend": 65.12,
-          "leads": 1
+          "leads": 34
         },
         {
           "date": "2026-09-05",
           "spend": 62.11,
-          "leads": 1
+          "leads": 22
         },
         {
           "date": "2026-09-06",
           "spend": 101.72999999999999,
-          "leads": 2
+          "leads": 68
         },
         {
           "date": "2026-09-07",
           "spend": 71.6,
-          "leads": 4
+          "leads": 42
         },
         {
           "date": "2026-09-08",
           "spend": 87.41000000000001,
-          "leads": 1
+          "leads": 42
         },
         {
           "date": "2026-09-09",
           "spend": 69.68,
-          "leads": 1
+          "leads": 29
         },
         {
           "date": "2026-09-10",
           "spend": 111.81,
-          "leads": 1
+          "leads": 62
         },
         {
           "date": "2026-09-11",
           "spend": 81.75999999999999,
-          "leads": 1
+          "leads": 47
         },
         {
           "date": "2026-09-12",
           "spend": 29.43,
-          "leads": 0
+          "leads": 18
         },
         {
           "date": "2026-09-13",
           "spend": 33.27,
-          "leads": 4
+          "leads": 17
         },
         {
           "date": "2026-09-14",
           "spend": 112.75999999999999,
-          "leads": 1
+          "leads": 52
         },
         {
           "date": "2026-09-15",
           "spend": 169.67,
-          "leads": 5
+          "leads": 70
         },
         {
           "date": "2026-09-16",
           "spend": 122.34999999999998,
-          "leads": 9
+          "leads": 53
         },
         {
           "date": "2026-09-17",
           "spend": 122.27000000000001,
-          "leads": 16
+          "leads": 56
         },
         {
           "date": "2026-09-18",
           "spend": 105.92,
-          "leads": 5
+          "leads": 42
         },
         {
           "date": "2026-09-19",
           "spend": 59.49,
-          "leads": 0
+          "leads": 24
         },
         {
           "date": "2026-09-20",
           "spend": 82.53,
-          "leads": 0
+          "leads": 36
         },
         {
           "date": "2026-09-21",
-          "spend": 31.43,
-          "leads": 0
+          "spend": 37.26,
+          "leads": 18
         }
       ],
       "categories": {
@@ -598,52 +598,52 @@
             {
               "date": "2026-08-01",
               "spend": 28,
-              "leads": 0
+              "leads": 22
             },
             {
               "date": "2026-08-02",
               "spend": 7.72,
-              "leads": 0
+              "leads": 8
             },
             {
               "date": "2026-08-03",
               "spend": 5.67,
-              "leads": 0
+              "leads": 6
             },
             {
               "date": "2026-08-04",
               "spend": 54.76,
-              "leads": 0
+              "leads": 35
             },
             {
               "date": "2026-08-05",
               "spend": 56.94,
-              "leads": 0
+              "leads": 31
             },
             {
               "date": "2026-08-06",
               "spend": 34.67,
-              "leads": 0
+              "leads": 30
             },
             {
               "date": "2026-08-07",
               "spend": 49.14,
-              "leads": 0
+              "leads": 22
             },
             {
               "date": "2026-08-08",
               "spend": 16.68,
-              "leads": 0
+              "leads": 11
             },
             {
               "date": "2026-08-09",
               "spend": 27.94,
-              "leads": 0
+              "leads": 30
             },
             {
               "date": "2026-08-10",
               "spend": 33.83,
-              "leads": 0
+              "leads": 28
             },
             {
               "date": "2026-08-11",
@@ -653,207 +653,207 @@
             {
               "date": "2026-08-12",
               "spend": 1.99,
-              "leads": 0
+              "leads": 2
             },
             {
               "date": "2026-08-13",
               "spend": 35.13,
-              "leads": 0
+              "leads": 25
             },
             {
               "date": "2026-08-14",
               "spend": 43.89,
-              "leads": 0
+              "leads": 28
             },
             {
               "date": "2026-08-15",
               "spend": 25.1,
-              "leads": 0
+              "leads": 7
             },
             {
               "date": "2026-08-16",
               "spend": 30.58,
-              "leads": 0
+              "leads": 22
             },
             {
               "date": "2026-08-17",
               "spend": 25.34,
-              "leads": 0
+              "leads": 24
             },
             {
               "date": "2026-08-18",
               "spend": 5.99,
-              "leads": 0
+              "leads": 3
             },
             {
               "date": "2026-08-19",
               "spend": 17.61,
-              "leads": 0
+              "leads": 13
             },
             {
               "date": "2026-08-20",
               "spend": 42.67,
-              "leads": 0
+              "leads": 41
             },
             {
               "date": "2026-08-21",
               "spend": 30.76,
-              "leads": 0
+              "leads": 24
             },
             {
               "date": "2026-08-22",
               "spend": 26.74,
-              "leads": 0
+              "leads": 25
             },
             {
               "date": "2026-08-23",
               "spend": 22.08,
-              "leads": 0
+              "leads": 22
             },
             {
               "date": "2026-08-24",
               "spend": 43.41,
-              "leads": 0
+              "leads": 22
             },
             {
               "date": "2026-08-25",
               "spend": 63.98,
-              "leads": 0
+              "leads": 27
             },
             {
               "date": "2026-08-26",
               "spend": 47.96,
-              "leads": 0
+              "leads": 30
             },
             {
               "date": "2026-08-27",
               "spend": 50.45,
-              "leads": 0
+              "leads": 30
             },
             {
               "date": "2026-08-28",
               "spend": 41.27,
-              "leads": 0
+              "leads": 22
             },
             {
               "date": "2026-08-29",
               "spend": 46.23,
-              "leads": 0
+              "leads": 21
             },
             {
               "date": "2026-08-30",
               "spend": 23.05,
-              "leads": 0
+              "leads": 21
             },
             {
               "date": "2026-08-31",
               "spend": 34.4,
-              "leads": 0
+              "leads": 19
             },
             {
               "date": "2026-09-01",
               "spend": 33.77,
-              "leads": 0
+              "leads": 24
             },
             {
               "date": "2026-09-02",
               "spend": 44.85,
-              "leads": 0
+              "leads": 20
             },
             {
               "date": "2026-09-03",
               "spend": 25.27,
-              "leads": 0
+              "leads": 8
             },
             {
               "date": "2026-09-04",
               "spend": 37.43,
-              "leads": 0
+              "leads": 15
             },
             {
               "date": "2026-09-05",
               "spend": 35.87,
-              "leads": 0
+              "leads": 13
             },
             {
               "date": "2026-09-06",
               "spend": 73.53,
-              "leads": 0
+              "leads": 56
             },
             {
               "date": "2026-09-07",
               "spend": 46.56,
-              "leads": 0
+              "leads": 31
             },
             {
               "date": "2026-09-08",
               "spend": 37.03,
-              "leads": 0
+              "leads": 21
             },
             {
               "date": "2026-09-09",
               "spend": 17.71,
-              "leads": 0
+              "leads": 7
             },
             {
               "date": "2026-09-10",
               "spend": 32.04,
-              "leads": 0
+              "leads": 21
             },
             {
               "date": "2026-09-11",
               "spend": 28.18,
-              "leads": 0
+              "leads": 17
             },
             {
               "date": "2026-09-12",
               "spend": 25.95,
-              "leads": 0
+              "leads": 17
             },
             {
               "date": "2026-09-13",
               "spend": 27.3,
-              "leads": 0
+              "leads": 13
             },
             {
               "date": "2026-09-14",
               "spend": 51.48,
-              "leads": 0
+              "leads": 29
             },
             {
               "date": "2026-09-15",
               "spend": 66.6,
-              "leads": 0
+              "leads": 23
             },
             {
               "date": "2026-09-16",
               "spend": 61.4,
-              "leads": 0
+              "leads": 30
             },
             {
               "date": "2026-09-17",
               "spend": 54.52,
-              "leads": 0
+              "leads": 25
             },
             {
               "date": "2026-09-18",
               "spend": 62.57,
-              "leads": 0
+              "leads": 28
             },
             {
               "date": "2026-09-19",
               "spend": 59.49,
-              "leads": 0
+              "leads": 24
             },
             {
               "date": "2026-09-20",
               "spend": 82.53,
-              "leads": 0
+              "leads": 36
             },
             {
               "date": "2026-09-21",
-              "spend": 27.2,
-              "leads": 0
+              "spend": 31.93,
+              "leads": 17
             }
           ]
         },
@@ -1093,28 +1093,6 @@
             }
           ]
         },
-        "Яндекс GO Алишер 2026 ВАЦАП": {
-          "name": "Яндекс GO Алишер 2026 ВАЦАП",
-          "dailyBudget": 0,
-          "daily": [
-            {
-              "date": "2026-08-01",
-              "spend": 0,
-              "leads": 0
-            }
-          ]
-        },
-        "ЯНДЕКС АЛИШЕР": {
-          "name": "ЯНДЕКС АЛИШЕР",
-          "dailyBudget": 0,
-          "daily": [
-            {
-              "date": "2026-08-04",
-              "spend": 0.08,
-              "leads": 0
-            }
-          ]
-        },
         "Подключашка": {
           "name": "Подключашка",
           "dailyBudget": 20,
@@ -1122,12 +1100,12 @@
             {
               "date": "2026-08-05",
               "spend": 29.82,
-              "leads": 0
+              "leads": 5
             },
             {
               "date": "2026-08-06",
               "spend": 8.75,
-              "leads": 0
+              "leads": 1
             },
             {
               "date": "2026-08-07",
@@ -1137,7 +1115,7 @@
             {
               "date": "2026-08-13",
               "spend": 9.87,
-              "leads": 0
+              "leads": 2
             },
             {
               "date": "2026-08-14",
@@ -1147,147 +1125,147 @@
             {
               "date": "2026-08-19",
               "spend": 20.06,
-              "leads": 0
+              "leads": 10
             },
             {
               "date": "2026-08-20",
               "spend": 9.89,
-              "leads": 0
+              "leads": 6
             },
             {
               "date": "2026-08-21",
               "spend": 9.53,
-              "leads": 0
+              "leads": 4
             },
             {
               "date": "2026-08-22",
               "spend": 8.55,
-              "leads": 0
+              "leads": 3
             },
             {
               "date": "2026-08-23",
               "spend": 10.01,
-              "leads": 0
+              "leads": 3
             },
             {
               "date": "2026-08-24",
               "spend": 11.7,
-              "leads": 0
+              "leads": 5
             },
             {
               "date": "2026-08-25",
               "spend": 12.28,
-              "leads": 0
+              "leads": 3
             },
             {
               "date": "2026-08-26",
               "spend": 8.97,
-              "leads": 0
+              "leads": 5
             },
             {
               "date": "2026-08-27",
               "spend": 9.93,
-              "leads": 0
+              "leads": 8
             },
             {
               "date": "2026-08-28",
               "spend": 8.54,
-              "leads": 0
+              "leads": 5
             },
             {
               "date": "2026-08-29",
               "spend": 8.44,
-              "leads": 0
+              "leads": 2
             },
             {
               "date": "2026-08-30",
               "spend": 9.69,
-              "leads": 0
+              "leads": 8
             },
             {
               "date": "2026-08-31",
               "spend": 13.13,
-              "leads": 0
+              "leads": 3
             },
             {
               "date": "2026-09-01",
               "spend": 8.99,
-              "leads": 0
+              "leads": 1
             },
             {
               "date": "2026-09-02",
               "spend": 23.54,
-              "leads": 0
+              "leads": 15
             },
             {
               "date": "2026-09-03",
               "spend": 9.940000000000001,
-              "leads": 0
+              "leads": 10
             },
             {
               "date": "2026-09-04",
               "spend": 21.8,
-              "leads": 0
+              "leads": 18
             },
             {
               "date": "2026-09-05",
               "spend": 19.77,
-              "leads": 0
+              "leads": 8
             },
             {
               "date": "2026-09-06",
               "spend": 21.82,
-              "leads": 0
+              "leads": 10
             },
             {
               "date": "2026-09-07",
               "spend": 19.64,
-              "leads": 0
+              "leads": 7
             },
             {
               "date": "2026-09-08",
               "spend": 28.84,
-              "leads": 0
+              "leads": 12
             },
             {
               "date": "2026-09-09",
               "spend": 17.3,
-              "leads": 0
+              "leads": 4
             },
             {
               "date": "2026-09-10",
               "spend": 17.14,
-              "leads": 0
+              "leads": 2
             },
             {
               "date": "2026-09-11",
               "spend": 9.5,
-              "leads": 0
+              "leads": 5
             },
             {
               "date": "2026-09-14",
               "spend": 22.06,
-              "leads": 0
+              "leads": 11
             },
             {
               "date": "2026-09-15",
               "spend": 70.52000000000001,
-              "leads": 3
+              "leads": 26
             },
             {
               "date": "2026-09-16",
               "spend": 54.059999999999995,
-              "leads": 7
+              "leads": 21
             },
             {
               "date": "2026-09-17",
               "spend": 59.84,
-              "leads": 15
+              "leads": 30
             },
             {
               "date": "2026-09-18",
               "spend": 39.400000000000006,
-              "leads": 3
+              "leads": 12
             },
             {
               "date": "2026-09-19",
@@ -1296,8 +1274,8 @@
             },
             {
               "date": "2026-09-21",
-              "spend": 4.21,
-              "leads": 0
+              "spend": 5.31,
+              "leads": 1
             }
           ]
         },
@@ -1308,37 +1286,37 @@
             {
               "date": "2026-09-08",
               "spend": 15.84,
-              "leads": 0
+              "leads": 8
             },
             {
               "date": "2026-09-09",
               "spend": 29.68,
-              "leads": 0
+              "leads": 17
             },
             {
               "date": "2026-09-10",
               "spend": 58.02,
-              "leads": 0
+              "leads": 38
             },
             {
               "date": "2026-09-11",
               "spend": 39.71,
-              "leads": 0
+              "leads": 24
             },
             {
               "date": "2026-09-12",
               "spend": 0,
-              "leads": 0
+              "leads": 1
             },
             {
               "date": "2026-09-14",
               "spend": 33.62,
-              "leads": 0
+              "leads": 11
             },
             {
               "date": "2026-09-15",
               "spend": 25.25,
-              "leads": 0
+              "leads": 19
             }
           ]
         }
