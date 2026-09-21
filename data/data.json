@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T12:10:44.581Z",
+  "generatedAt": "2026-09-21T13:08:09.985Z",
   "channels": {
     "google": {
       "name": "Google Ads",
@@ -94,12 +94,12 @@
         {
           "date": "2026-09-20",
           "spend": 52.911853,
-          "leads": 9
+          "leads": 9.5
         },
         {
           "date": "2026-09-21",
-          "spend": 45.554576,
-          "leads": 0
+          "spend": 45.481728,
+          "leads": 0.5
         }
       ],
       "categories": {
@@ -195,12 +195,12 @@
             {
               "date": "2026-09-20",
               "spend": 52.911853,
-              "leads": 9
+              "leads": 9.5
             },
             {
               "date": "2026-09-21",
-              "spend": 45.554576,
-              "leads": 0
+              "spend": 45.481728,
+              "leads": 0.5
             }
           ]
         },
@@ -327,7 +327,7 @@
     "meta": {
       "name": "Meta Ads",
       "currency": "USD",
-      "dailyBudget": 81,
+      "dailyBudget": 41,
       "daily": [
         {
           "date": "2026-08-01",
@@ -586,14 +586,14 @@
         },
         {
           "date": "2026-09-21",
-          "spend": 58.57,
-          "leads": 31
+          "spend": 62.410000000000004,
+          "leads": 33
         }
       ],
       "categories": {
         "Аренда": {
           "name": "Аренда",
-          "dailyBudget": 60,
+          "dailyBudget": 40,
           "daily": [
             {
               "date": "2026-08-01",
@@ -852,8 +852,8 @@
             },
             {
               "date": "2026-09-21",
-              "spend": 50.87,
-              "leads": 25
+              "spend": 54.34,
+              "leads": 27
             }
           ]
         },
@@ -1095,7 +1095,7 @@
         },
         "Подключашка": {
           "name": "Подключашка",
-          "dailyBudget": 20,
+          "dailyBudget": 0,
           "daily": [
             {
               "date": "2026-08-05",
@@ -1274,7 +1274,7 @@
             },
             {
               "date": "2026-09-21",
-              "spend": 7.68,
+              "spend": 8.05,
               "leads": 6
             }
           ]
