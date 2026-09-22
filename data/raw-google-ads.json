@@ -131,14 +131,14 @@
       "campaignName": "Аренда - Алматы",
       "date": "2026-09-21",
       "costUsd": 47.481267,
-      "conversions": 0.5
+      "conversions": 0.500577
     },
     {
       "campaignId": "24206794720",
       "campaignName": "Аренда - Алматы",
       "date": "2026-09-22",
-      "costUsd": 25.187843,
-      "conversions": 1
+      "costUsd": 28.327843,
+      "conversions": 3.999423
     },
     {
       "campaignId": "24206794723",
@@ -440,9 +440,9 @@
       "campaignId": "24206794720",
       "campaignName": "Аренда - Алматы",
       "status": "ENABLED",
-      "dailyBudgetUsd": 40
+      "dailyBudgetUsd": 20
     }
   ],
-  "totalActiveDailyBudgetUsd": 40,
+  "totalActiveDailyBudgetUsd": 20,
   "skipped": false
 }
