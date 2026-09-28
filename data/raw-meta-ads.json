@@ -1145,7 +1145,7 @@
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "date": "2026-09-24",
-      "spendUsd": 37.94,
+      "spendUsd": 37.95,
       "leads": 20
     },
     {
@@ -1173,29 +1173,113 @@
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "date": "2026-09-25",
-      "spendUsd": 11.1,
-      "leads": 8
+      "spendUsd": 40.03,
+      "leads": 26
     },
     {
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "date": "2026-09-25",
-      "spendUsd": 0.48,
+      "spendUsd": 0.95,
       "leads": 0
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-09-25",
-      "spendUsd": 7.3,
-      "leads": 2
+      "spendUsd": 16.28,
+      "leads": 7
     },
     {
       "campaignId": "120252111426270024",
       "campaignName": "Аренда - Лиды квиз — Видео",
       "date": "2026-09-25",
-      "spendUsd": 10.5,
-      "leads": 6
+      "spendUsd": 22.5,
+      "leads": 11
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-26",
+      "spendUsd": 41.15,
+      "leads": 13
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-26",
+      "spendUsd": 0.69,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252094114250024",
+      "campaignName": "Аренда - Лиды квиз",
+      "date": "2026-09-26",
+      "spendUsd": 20.08,
+      "leads": 5
+    },
+    {
+      "campaignId": "120252111426270024",
+      "campaignName": "Аренда - Лиды квиз — Видео",
+      "date": "2026-09-26",
+      "spendUsd": 30.42,
+      "leads": 10
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-27",
+      "spendUsd": 40.32,
+      "leads": 14
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-27",
+      "spendUsd": 1.46,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252094114250024",
+      "campaignName": "Аренда - Лиды квиз",
+      "date": "2026-09-27",
+      "spendUsd": 26.28,
+      "leads": 8
+    },
+    {
+      "campaignId": "120252111426270024",
+      "campaignName": "Аренда - Лиды квиз — Видео",
+      "date": "2026-09-27",
+      "spendUsd": 35.16,
+      "leads": 7
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-09-28",
+      "spendUsd": 10.43,
+      "leads": 4
+    },
+    {
+      "campaignId": "120249564387340024",
+      "campaignName": "Инвест - Сайт",
+      "date": "2026-09-28",
+      "spendUsd": 0.47,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252094114250024",
+      "campaignName": "Аренда - Лиды квиз",
+      "date": "2026-09-28",
+      "spendUsd": 5.78,
+      "leads": 4
+    },
+    {
+      "campaignId": "120252111426270024",
+      "campaignName": "Аренда - Лиды квиз — Видео",
+      "date": "2026-09-28",
+      "spendUsd": 7.12,
+      "leads": 4
     }
   ],
   "activeCampaigns": [
