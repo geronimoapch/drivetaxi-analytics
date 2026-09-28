@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T08:11:56.244Z",
+  "generatedAt": "2026-09-28T09:11:53.508Z",
   "channels": {
     "google": {
       "name": "Google Ads",
@@ -133,7 +133,7 @@
         },
         {
           "date": "2026-09-28",
-          "spend": 10.24,
+          "spend": 15.01,
           "leads": 0
         }
       ],
@@ -269,7 +269,7 @@
             },
             {
               "date": "2026-09-28",
-              "spend": 10.24,
+              "spend": 15.01,
               "leads": 0
             }
           ]
@@ -397,7 +397,7 @@
     "meta": {
       "name": "Meta Ads",
       "currency": "USD",
-      "dailyBudget": 91,
+      "dailyBudget": 105,
       "daily": [
         {
           "date": "2026-08-01",
@@ -691,8 +691,8 @@
         },
         {
           "date": "2026-09-28",
-          "spend": 42.29,
-          "leads": 24
+          "spend": 48.82,
+          "leads": 28
         }
       ],
       "categories": {
@@ -992,14 +992,14 @@
             },
             {
               "date": "2026-09-28",
-              "spend": 41.78,
-              "leads": 24
+              "spend": 48.14,
+              "leads": 28
             }
           ]
         },
         "Инвест": {
           "name": "Инвест",
-          "dailyBudget": 1,
+          "dailyBudget": 15,
           "daily": [
             {
               "date": "2026-08-01",
@@ -1263,7 +1263,7 @@
             },
             {
               "date": "2026-09-28",
-              "spend": 0.51,
+              "spend": 0.68,
               "leads": 0
             }
           ]

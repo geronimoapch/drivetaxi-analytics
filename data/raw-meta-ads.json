@@ -1257,29 +1257,29 @@
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "date": "2026-09-28",
-      "spendUsd": 19.83,
-      "leads": 11
+      "spendUsd": 23.82,
+      "leads": 13
     },
     {
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "date": "2026-09-28",
-      "spendUsd": 0.51,
+      "spendUsd": 0.68,
       "leads": 0
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-09-28",
-      "spendUsd": 9.89,
-      "leads": 7
+      "spendUsd": 11.13,
+      "leads": 8
     },
     {
       "campaignId": "120252111426270024",
       "campaignName": "Аренда - Лиды квиз — Видео",
       "date": "2026-09-28",
-      "spendUsd": 12.06,
-      "leads": 6
+      "spendUsd": 13.19,
+      "leads": 7
     }
   ],
   "activeCampaigns": [
@@ -1299,7 +1299,7 @@
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "effectiveStatus": "ACTIVE",
-      "dailyBudgetUsd": 1
+      "dailyBudgetUsd": 15
     },
     {
       "campaignId": "120245785848080024",
@@ -1308,6 +1308,6 @@
       "dailyBudgetUsd": 40
     }
   ],
-  "totalActiveDailyBudgetUsd": 91,
+  "totalActiveDailyBudgetUsd": 105,
   "skipped": false
 }
