@@ -1285,22 +1285,22 @@
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "date": "2026-09-29",
-      "spendUsd": 18.25,
+      "spendUsd": 20.69,
       "leads": 10
     },
     {
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "date": "2026-09-29",
-      "spendUsd": 8.14,
-      "leads": 3
+      "spendUsd": 8.96,
+      "leads": 4
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-09-29",
-      "spendUsd": 11.64,
-      "leads": 1
+      "spendUsd": 13.36,
+      "leads": 2
     }
   ],
   "activeCampaigns": [
