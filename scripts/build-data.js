@@ -1,8 +1,10 @@
-// Сводит raw-google-ads.json + raw-meta-ads.json + raw-amocrm.json в один
-// файл data/data.json, который читает дашборд (index.html).
+// Сводит raw-google-ads.json + raw-meta-ads.json + raw-tiktok-ads.json +
+// raw-amocrm.json в один файл data/data.json, который читает дашборд
+// (index.html).
 //
-// Google Ads и Meta Ads отдают расход и бюджет в долларах (валюта рекламных
-// кабинетов) — оставляем как есть, без пересчёта в тенге.
+// Google Ads, Meta Ads и TikTok Ads отдают расход и бюджет в валюте
+// рекламных кабинетов (у нас доллары) — оставляем как есть, без пересчёта
+// в тенге.
 //
 // Данные по расходу/лидам сохраняются ПОДНЕВНО (daily: [{date, spend, leads}]),
 // а не одной суммой — дашборд сам считает нужный период (сегодня/вчера/7 дней/
@@ -33,7 +35,7 @@ function toDailySeries(rows, spendField, leadsField) {
 }
 
 // То же самое, но для уже приведённых к общему виду строк { date, spend, leads }
-// (используется при объединении Google + Meta в один ряд по направлению).
+// (используется для разбивки по направлениям внутри канала).
 function toDailySeriesFromUnified(rows) {
   const byDate = {};
   rows.forEach((r) => {
@@ -69,9 +71,9 @@ function categoryFromName(name) {
 
 // Строит разбивку по направлениям (Аренда/Подключашка/Инвест/Еда) ВНУТРИ
 // одного канала — то есть только по его собственным строкам/кампаниям, без
-// смешивания с другим каналом. Используется отдельно для Google и для Meta,
-// чтобы под каждым каналом дашборд мог показать свой раскрывающийся список
-// направлений с корректным per-канальным дневным лимитом.
+// смешивания с другими каналами. Используется отдельно для Google, Meta и
+// TikTok, чтобы под каждым каналом дашборд мог показать свой раскрывающийся
+// список направлений с корректным per-канальным дневным лимитом.
 function buildCategoriesForChannel(rows, activeCampaigns, spendField, leadsField) {
   const rowsByCategory = {};
   (rows || []).forEach((r) => {
@@ -117,32 +119,35 @@ function filterExcludedCampaigns(raw) {
   };
 }
 
+// Пересчитываем дневной бюджет канала ПОСЛЕ исключения кампаний — нельзя
+// брать готовую сумму totalActiveDailyBudgetUsd из raw-файла, она считалась
+// ДО фильтрации и включала бы бюджет исключённых кампаний.
+const sumActiveBudget = (activeCampaigns) =>
+  (activeCampaigns || []).reduce((acc, c) => acc + Number(c.dailyBudgetUsd || 0), 0);
+
+// Собирает готовый блок канала (Google/Meta/TikTok/...) в одном месте, чтобы
+// не дублировать одну и ту же логику под каждый канал по отдельности.
+function buildChannel(name, raw, spendField, leadsField) {
+  const filtered = filterExcludedCampaigns(raw);
+  return {
+    name,
+    currency: 'USD',
+    dailyBudget: sumActiveBudget(filtered.activeCampaigns),
+    daily: toDailySeries(filtered.rows || [], spendField, leadsField),
+    categories: buildCategoriesForChannel(filtered.rows, filtered.activeCampaigns, spendField, leadsField),
+  };
+}
+
 function main() {
-  const googleRaw = filterExcludedCampaigns(readJson('raw-google-ads.json', { rows: [] }));
-  const metaRaw = filterExcludedCampaigns(readJson('raw-meta-ads.json', { rows: [] }));
+  const googleRaw = readJson('raw-google-ads.json', { rows: [] });
+  const metaRaw = readJson('raw-meta-ads.json', { rows: [] });
+  const tiktokRaw = readJson('raw-tiktok-ads.json', { rows: [] });
   const amo = readJson('raw-amocrm.json', { rows: [] }).rows;
 
-  // Пересчитываем дневной бюджет канала ПОСЛЕ исключения кампаний — нельзя
-  // брать готовую сумму totalActiveDailyBudgetUsd из raw-файла, она считалась
-  // ДО фильтрации и включала бы бюджет исключённых кампаний.
-  const sumActiveBudget = (activeCampaigns) =>
-    (activeCampaigns || []).reduce((acc, c) => acc + Number(c.dailyBudgetUsd || 0), 0);
-
   const channels = {
-    google: {
-      name: 'Google Ads',
-      currency: 'USD',
-      dailyBudget: sumActiveBudget(googleRaw.activeCampaigns),
-      daily: toDailySeries(googleRaw.rows || [], 'costUsd', 'conversions'),
-      categories: buildCategoriesForChannel(googleRaw.rows, googleRaw.activeCampaigns, 'costUsd', 'conversions'),
-    },
-    meta: {
-      name: 'Meta Ads',
-      currency: 'USD',
-      dailyBudget: sumActiveBudget(metaRaw.activeCampaigns),
-      daily: toDailySeries(metaRaw.rows || [], 'spendUsd', 'leads'),
-      categories: buildCategoriesForChannel(metaRaw.rows, metaRaw.activeCampaigns, 'spendUsd', 'leads'),
-    },
+    google: buildChannel('Google Ads', googleRaw, 'costUsd', 'conversions'),
+    meta: buildChannel('Meta Ads', metaRaw, 'spendUsd', 'leads'),
+    tiktok: buildChannel('TikTok Ads', tiktokRaw, 'spendUsd', 'leads'),
   };
 
   // --- Сделки amoCRM: по этапам воронки (как на скрине CRM) ---
@@ -183,8 +188,10 @@ function main() {
     'data.json собран. Каналы:', Object.keys(channels).join(', '),
     '| направления Google:', Object.keys(channels.google.categories).join(', '),
     '| направления Meta:', Object.keys(channels.meta.categories).join(', '),
+    '| направления TikTok:', Object.keys(channels.tiktok.categories).join(', '),
     '| дней данных Google:', channels.google.daily.length,
-    '| дней данных Meta:', channels.meta.daily.length
+    '| дней данных Meta:', channels.meta.daily.length,
+    '| дней данных TikTok:', channels.tiktok.daily.length
   );
 }
 
