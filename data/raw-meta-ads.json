@@ -858,22 +858,22 @@
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "date": "2026-10-04",
-      "spendUsd": 17.47,
-      "leads": 5
+      "spendUsd": 32.73,
+      "leads": 11
     },
     {
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "date": "2026-10-04",
-      "spendUsd": 11.16,
-      "leads": 2
+      "spendUsd": 17.41,
+      "leads": 3
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-04",
-      "spendUsd": 32.44,
-      "leads": 8
+      "spendUsd": 47.37,
+      "leads": 14
     }
   ],
   "activeCampaigns": [
