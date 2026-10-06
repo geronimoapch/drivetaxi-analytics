@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T13:11:30.421Z",
+  "generatedAt": "2026-10-06T14:12:23.286Z",
   "channels": {
     "google": {
       "name": "Google Ads",
@@ -173,7 +173,7 @@
         },
         {
           "date": "2026-10-06",
-          "spend": 22.417386,
+          "spend": 22.917386,
           "leads": 1
         }
       ],
@@ -349,7 +349,7 @@
             },
             {
               "date": "2026-10-06",
-              "spend": 22.417386,
+              "spend": 22.917386,
               "leads": 1
             }
           ]
@@ -477,7 +477,7 @@
     "meta": {
       "name": "Meta Ads",
       "currency": "USD",
-      "dailyBudget": 55,
+      "dailyBudget": 20,
       "daily": [
         {
           "date": "2026-09-01",
@@ -656,14 +656,14 @@
         },
         {
           "date": "2026-10-06",
-          "spend": 47.89,
-          "leads": 14
+          "spend": 49.08,
+          "leads": 15
         }
       ],
       "categories": {
         "Аренда": {
           "name": "Аренда",
-          "dailyBudget": 40,
+          "dailyBudget": 0,
           "daily": [
             {
               "date": "2026-09-01",
@@ -842,7 +842,7 @@
             },
             {
               "date": "2026-10-06",
-              "spend": 35.97,
+              "spend": 36.57,
               "leads": 10
             }
           ]
@@ -1018,14 +1018,14 @@
             },
             {
               "date": "2026-10-06",
-              "spend": 11.92,
-              "leads": 4
+              "spend": 12.49,
+              "leads": 5
             }
           ]
         },
         "Подключашка": {
           "name": "Подключашка",
-          "dailyBudget": 0,
+          "dailyBudget": 5,
           "daily": [
             {
               "date": "2026-09-01",
@@ -1125,6 +1125,11 @@
             {
               "date": "2026-09-23",
               "spend": 0,
+              "leads": 0
+            },
+            {
+              "date": "2026-10-06",
+              "spend": 0.02,
               "leads": 0
             }
           ]
