@@ -907,21 +907,21 @@
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "date": "2026-10-06",
-      "spendUsd": 12.49,
+      "spendUsd": 13.1,
       "leads": 5
     },
     {
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-06",
-      "spendUsd": 0.02,
+      "spendUsd": 0.36,
       "leads": 0
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-06",
-      "spendUsd": 36.57,
+      "spendUsd": 36.61,
       "leads": 10
     }
   ],
