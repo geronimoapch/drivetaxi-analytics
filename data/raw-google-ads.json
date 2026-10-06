@@ -235,7 +235,7 @@
       "campaignId": "24206794720",
       "campaignName": "Аренда - Алматы",
       "date": "2026-10-06",
-      "costUsd": 21.227386,
+      "costUsd": 22.417386,
       "conversions": 1
     },
     {
@@ -539,8 +539,20 @@
       "campaignName": "Аренда - Алматы",
       "status": "ENABLED",
       "dailyBudgetUsd": 20
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Подключашка - KZ",
+      "status": "ENABLED",
+      "dailyBudgetUsd": 5
+    },
+    {
+      "campaignId": "24247628106",
+      "campaignName": "Инвест - Алматы",
+      "status": "ENABLED",
+      "dailyBudgetUsd": 15
     }
   ],
-  "totalActiveDailyBudgetUsd": 20,
+  "totalActiveDailyBudgetUsd": 40,
   "skipped": false
 }
