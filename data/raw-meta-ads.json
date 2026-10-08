@@ -963,15 +963,15 @@
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "date": "2026-10-08",
-      "spendUsd": 8.57,
+      "spendUsd": 9.48,
       "leads": 1
     },
     {
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-08",
-      "spendUsd": 3.47,
-      "leads": 1
+      "spendUsd": 3.7,
+      "leads": 2
     }
   ],
   "activeCampaigns": [
