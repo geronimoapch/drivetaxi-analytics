@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-09T11:10:29.669Z",
+  "generatedAt": "2026-10-09T12:12:18.840Z",
   "channels": {
     "google": {
       "name": "Google Ads",
       "currency": "USD",
-      "dailyBudget": 40,
+      "dailyBudget": 25,
       "daily": [
         {
           "date": "2026-09-02",
@@ -188,7 +188,7 @@
         },
         {
           "date": "2026-10-09",
-          "spend": 12.549825,
+          "spend": 13.958439,
           "leads": 2
         }
       ],
@@ -470,7 +470,7 @@
             },
             {
               "date": "2026-10-09",
-              "spend": 3.08,
+              "spend": 4.488614,
               "leads": 2
             }
           ]
@@ -513,7 +513,7 @@
         },
         "Инвест": {
           "name": "Инвест",
-          "dailyBudget": 15,
+          "dailyBudget": 0,
           "daily": [
             {
               "date": "2026-09-15",
@@ -537,7 +537,7 @@
     "meta": {
       "name": "Meta Ads",
       "currency": "USD",
-      "dailyBudget": 45,
+      "dailyBudget": 70,
       "daily": [
         {
           "date": "2026-09-01",
@@ -731,14 +731,14 @@
         },
         {
           "date": "2026-10-09",
-          "spend": 15.149999999999999,
-          "leads": 1
+          "spend": 21.299999999999997,
+          "leads": 3
         }
       ],
       "categories": {
         "Аренда": {
           "name": "Аренда",
-          "dailyBudget": 0,
+          "dailyBudget": 40,
           "daily": [
             {
               "date": "2026-09-01",
@@ -932,14 +932,14 @@
             },
             {
               "date": "2026-10-09",
-              "spend": 0,
+              "spend": 4.04,
               "leads": 0
             }
           ]
         },
         "Инвест": {
           "name": "Инвест",
-          "dailyBudget": 15,
+          "dailyBudget": 0,
           "daily": [
             {
               "date": "2026-09-01",
@@ -1123,7 +1123,7 @@
             },
             {
               "date": "2026-10-09",
-              "spend": 7.3,
+              "spend": 7.64,
               "leads": 0
             }
           ]
@@ -1249,8 +1249,8 @@
             },
             {
               "date": "2026-10-09",
-              "spend": 7.85,
-              "leads": 1
+              "spend": 9.62,
+              "leads": 3
             }
           ]
         },

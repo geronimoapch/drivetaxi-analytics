@@ -984,31 +984,38 @@
       "campaignId": "120249564387340024",
       "campaignName": "Инвест - Сайт",
       "date": "2026-10-09",
-      "spendUsd": 7.3,
+      "spendUsd": 7.64,
       "leads": 0
     },
     {
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-09",
-      "spendUsd": 7.85,
-      "leads": 1
+      "spendUsd": 9.62,
+      "leads": 3
+    },
+    {
+      "campaignId": "120252094114250024",
+      "campaignName": "Аренда - Лиды квиз",
+      "date": "2026-10-09",
+      "spendUsd": 4.04,
+      "leads": 0
     }
   ],
   "activeCampaigns": [
+    {
+      "campaignId": "120252094114250024",
+      "campaignName": "Аренда - Лиды квиз",
+      "effectiveStatus": "ACTIVE",
+      "dailyBudgetUsd": 40
+    },
     {
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "effectiveStatus": "ACTIVE",
       "dailyBudgetUsd": 30
-    },
-    {
-      "campaignId": "120249564387340024",
-      "campaignName": "Инвест - Сайт",
-      "effectiveStatus": "ACTIVE",
-      "dailyBudgetUsd": 15
     }
   ],
-  "totalActiveDailyBudgetUsd": 45,
+  "totalActiveDailyBudgetUsd": 70,
   "skipped": false
 }

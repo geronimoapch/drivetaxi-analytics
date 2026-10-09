@@ -340,7 +340,7 @@
       "campaignId": "24206794723",
       "campaignName": "Подключашка - KZ",
       "date": "2026-10-09",
-      "costUsd": 3.08,
+      "costUsd": 4.488614,
       "conversions": 2
     },
     {
@@ -608,14 +608,8 @@
       "campaignName": "Подключашка - KZ",
       "status": "ENABLED",
       "dailyBudgetUsd": 5
-    },
-    {
-      "campaignId": "24247628106",
-      "campaignName": "Инвест - Алматы",
-      "status": "ENABLED",
-      "dailyBudgetUsd": 15
     }
   ],
-  "totalActiveDailyBudgetUsd": 40,
+  "totalActiveDailyBudgetUsd": 25,
   "skipped": false
 }
