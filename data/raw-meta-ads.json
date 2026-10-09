@@ -991,14 +991,14 @@
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-09",
-      "spendUsd": 10.83,
-      "leads": 4
+      "spendUsd": 11.82,
+      "leads": 5
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-09",
-      "spendUsd": 9.81,
+      "spendUsd": 13.61,
       "leads": 3
     }
   ],
