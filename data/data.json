@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T15:11:13.697Z",
+  "generatedAt": "2026-10-09T16:11:19.516Z",
   "channels": {
     "google": {
       "name": "Google Ads",
@@ -731,8 +731,8 @@
         },
         {
           "date": "2026-10-09",
-          "spend": 39.45,
-          "leads": 8
+          "spend": 45.72,
+          "leads": 9
         }
       ],
       "categories": {
@@ -932,7 +932,7 @@
             },
             {
               "date": "2026-10-09",
-              "spend": 18.36,
+              "spend": 23.66,
               "leads": 3
             }
           ]
@@ -1249,8 +1249,8 @@
             },
             {
               "date": "2026-10-09",
-              "spend": 13.43,
-              "leads": 5
+              "spend": 14.4,
+              "leads": 6
             }
           ]
         },
