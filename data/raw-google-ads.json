@@ -260,6 +260,13 @@
       "conversions": 1
     },
     {
+      "campaignId": "24206794720",
+      "campaignName": "Аренда - Алматы",
+      "date": "2026-10-10",
+      "costUsd": 1.333137,
+      "conversions": 0
+    },
+    {
       "campaignId": "24206794723",
       "campaignName": "Подключашка - KZ",
       "date": "2026-09-02",
@@ -342,6 +349,13 @@
       "date": "2026-10-09",
       "costUsd": 5.268614,
       "conversions": 3
+    },
+    {
+      "campaignId": "24206794723",
+      "campaignName": "Подключашка - KZ",
+      "date": "2026-10-10",
+      "costUsd": 1.06,
+      "conversions": 0
     },
     {
       "campaignId": "24228605411",
