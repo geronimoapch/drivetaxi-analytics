@@ -644,14 +644,8 @@
       "campaignName": "Аренда - Алматы",
       "status": "ENABLED",
       "dailyBudgetUsd": 20
-    },
-    {
-      "campaignId": "24206794723",
-      "campaignName": "Подключашка - KZ",
-      "status": "ENABLED",
-      "dailyBudgetUsd": 5
     }
   ],
-  "totalActiveDailyBudgetUsd": 25,
+  "totalActiveDailyBudgetUsd": 20,
   "skipped": false
 }

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-12T04:11:47.998Z",
+  "generatedAt": "2026-10-12T05:12:05.594Z",
   "channels": {
     "google": {
       "name": "Google Ads",
       "currency": "USD",
-      "dailyBudget": 25,
+      "dailyBudget": 20,
       "daily": [
         {
           "date": "2026-09-02",
@@ -416,7 +416,7 @@
         },
         "Подключашка": {
           "name": "Подключашка",
-          "dailyBudget": 5,
+          "dailyBudget": 0,
           "daily": [
             {
               "date": "2026-09-02",
@@ -582,7 +582,7 @@
     "meta": {
       "name": "Meta Ads",
       "currency": "USD",
-      "dailyBudget": 70,
+      "dailyBudget": 40,
       "daily": [
         {
           "date": "2026-09-01",
@@ -791,8 +791,8 @@
         },
         {
           "date": "2026-10-12",
-          "spend": 21.509999999999998,
-          "leads": 3
+          "spend": 27.61,
+          "leads": 7
         }
       ],
       "categories": {
@@ -1007,8 +1007,8 @@
             },
             {
               "date": "2026-10-12",
-              "spend": 10.7,
-              "leads": 2
+              "spend": 14.88,
+              "leads": 3
             }
           ]
         },
@@ -1205,7 +1205,7 @@
         },
         "Подключашка": {
           "name": "Подключашка",
-          "dailyBudget": 30,
+          "dailyBudget": 0,
           "daily": [
             {
               "date": "2026-09-01",
@@ -1339,8 +1339,8 @@
             },
             {
               "date": "2026-10-12",
-              "spend": 10.81,
-              "leads": 1
+              "spend": 12.73,
+              "leads": 4
             }
           ]
         },
