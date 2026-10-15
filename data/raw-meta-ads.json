@@ -1028,6 +1028,13 @@
       "date": "2026-10-14",
       "spendUsd": 35.85,
       "leads": 9
+    },
+    {
+      "campaignId": "120252094114250024",
+      "campaignName": "Аренда - Лиды квиз",
+      "date": "2026-10-15",
+      "spendUsd": 10.27,
+      "leads": 6
     }
   ],
   "activeCampaigns": [
