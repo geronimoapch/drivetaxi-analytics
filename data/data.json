@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T11:21:18.529Z",
+  "generatedAt": "2026-10-16T12:24:42.150Z",
   "channels": {
     "google": {
       "name": "Google Ads",
@@ -223,7 +223,7 @@
         },
         {
           "date": "2026-10-16",
-          "spend": 14.68,
+          "spend": 15.567168,
           "leads": 1
         }
       ],
@@ -449,7 +449,7 @@
             },
             {
               "date": "2026-10-16",
-              "spend": 14.68,
+              "spend": 15.567168,
               "leads": 1
             }
           ]
@@ -622,7 +622,7 @@
     "meta": {
       "name": "Meta Ads",
       "currency": "USD",
-      "dailyBudget": 60,
+      "dailyBudget": 90,
       "daily": [
         {
           "date": "2026-09-01",
@@ -851,14 +851,14 @@
         },
         {
           "date": "2026-10-16",
-          "spend": 26.58,
-          "leads": 8
+          "spend": 29.42,
+          "leads": 9
         }
       ],
       "categories": {
         "Аренда": {
           "name": "Аренда",
-          "dailyBudget": 60,
+          "dailyBudget": 90,
           "daily": [
             {
               "date": "2026-09-01",
@@ -1087,8 +1087,8 @@
             },
             {
               "date": "2026-10-16",
-              "spend": 26.58,
-              "leads": 8
+              "spend": 29.42,
+              "leads": 9
             }
           ]
         },

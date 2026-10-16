@@ -1040,8 +1040,8 @@
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-16",
-      "spendUsd": 26.58,
-      "leads": 8
+      "spendUsd": 29.42,
+      "leads": 9
     }
   ],
   "activeCampaigns": [
@@ -1049,9 +1049,9 @@
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "effectiveStatus": "ACTIVE",
-      "dailyBudgetUsd": 60
+      "dailyBudgetUsd": 90
     }
   ],
-  "totalActiveDailyBudgetUsd": 60,
+  "totalActiveDailyBudgetUsd": 90,
   "skipped": false
 }
