@@ -1047,8 +1047,15 @@
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-17",
-      "spendUsd": 92.7,
+      "spendUsd": 92.71,
       "leads": 31
+    },
+    {
+      "campaignId": "120252094114250024",
+      "campaignName": "Аренда - Лиды квиз",
+      "date": "2026-10-18",
+      "spendUsd": 9.24,
+      "leads": 2
     }
   ],
   "activeCampaigns": [
