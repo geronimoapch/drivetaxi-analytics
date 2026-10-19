@@ -1,6 +1,176 @@
 {
-  "rows": [],
-  "activeCampaigns": [],
+  "rows": [
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-09-30",
+      "spendUsd": 40.12,
+      "leads": 84
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-01",
+      "spendUsd": 20.06,
+      "leads": 31
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-02",
+      "spendUsd": 20.08,
+      "leads": 25
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-03",
+      "spendUsd": 19.86,
+      "leads": 19
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-04",
+      "spendUsd": 20.1,
+      "leads": 23
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-05",
+      "spendUsd": 20.13,
+      "leads": 42
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-06",
+      "spendUsd": 14.16,
+      "leads": 26
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-07",
+      "spendUsd": 0,
+      "leads": 0
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-08",
+      "spendUsd": 25.0,
+      "leads": 19
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-09",
+      "spendUsd": 40.17,
+      "leads": 30
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-10",
+      "spendUsd": 39.83,
+      "leads": 28
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-11",
+      "spendUsd": 36.86,
+      "leads": 23
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-12",
+      "spendUsd": 43.38,
+      "leads": 19
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-13",
+      "spendUsd": 39.15,
+      "leads": 26
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-14",
+      "spendUsd": 60.5,
+      "leads": 29
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-15",
+      "spendUsd": 85.74,
+      "leads": 36
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-16",
+      "spendUsd": 62.95,
+      "leads": 26
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-17",
+      "spendUsd": 36.71,
+      "leads": 12
+    },
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "date": "2026-10-18",
+      "spendUsd": 74.67,
+      "leads": 30
+    },
+    {
+      "campaignId": "manual-podklyuchashka",
+      "campaignName": "Подключашка - Квиз",
+      "date": "2026-10-09",
+      "spendUsd": 2.07,
+      "leads": 1
+    },
+    {
+      "campaignId": "manual-podklyuchashka",
+      "campaignName": "Подключашка - Квиз",
+      "date": "2026-10-10",
+      "spendUsd": 4.29,
+      "leads": 2
+    },
+    {
+      "campaignId": "manual-podklyuchashka",
+      "campaignName": "Подключашка - Квиз",
+      "date": "2026-10-11",
+      "spendUsd": 5.46,
+      "leads": 3
+    },
+    {
+      "campaignId": "manual-podklyuchashka",
+      "campaignName": "Подключашка - Квиз",
+      "date": "2026-10-12",
+      "spendUsd": 0.58,
+      "leads": 0
+    }
+  ],
+  "activeCampaigns": [
+    {
+      "campaignId": "manual-arenda",
+      "campaignName": "Аренда - Квиз",
+      "effectiveStatus": "ENABLE",
+      "dailyBudgetUsd": 0
+    }
+  ],
   "totalActiveDailyBudgetUsd": 0,
-  "skipped": true
+  "skipped": false,
+  "manual": true
 }

@@ -108,6 +108,12 @@ async function main() {
   if (!TIKTOK_ACCESS_TOKEN || !TIKTOK_ADVERTISER_ID) {
     console.error('Не заданы переменные окружения для TikTok Ads — пропускаю сбор (заполните Secrets в репозитории).');
     fs.mkdirSync(path.join(__dirname, '..', 'data'), { recursive: true });
+    const manualPath = path.join(__dirname, '..', 'data', 'tiktok-manual.json');
+    if (fs.existsSync(manualPath)) {
+      console.error('Использую ручные данные TikTok из data/tiktok-manual.json');
+      fs.copyFileSync(manualPath, path.join(__dirname, '..', 'data', 'raw-tiktok-ads.json'));
+      return;
+    }
     fs.writeFileSync(path.join(__dirname, '..', 'data', 'raw-tiktok-ads.json'), JSON.stringify({ rows: [], activeCampaigns: [], totalActiveDailyBudgetUsd: 0, skipped: true }, null, 2));
     return;
   }
