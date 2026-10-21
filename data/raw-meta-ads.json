@@ -1072,11 +1072,18 @@
       "leads": 35
     },
     {
+      "campaignId": "120252005126620024",
+      "campaignName": "Подключашка - Лиды квиз",
+      "date": "2026-10-21",
+      "spendUsd": 0,
+      "leads": 1
+    },
+    {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-21",
       "spendUsd": 0,
-      "leads": 9
+      "leads": 15
     }
   ],
   "activeCampaigns": [
@@ -1085,8 +1092,14 @@
       "campaignName": "Аренда - Лиды квиз",
       "effectiveStatus": "ACTIVE",
       "dailyBudgetUsd": 90
+    },
+    {
+      "campaignId": "120252005126620024",
+      "campaignName": "Подключашка - Лиды квиз",
+      "effectiveStatus": "ACTIVE",
+      "dailyBudgetUsd": 20
     }
   ],
-  "totalActiveDailyBudgetUsd": 90,
+  "totalActiveDailyBudgetUsd": 110,
   "skipped": false
 }
