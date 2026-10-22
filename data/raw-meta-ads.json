@@ -1082,22 +1082,22 @@
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-21",
-      "spendUsd": 81.74,
+      "spendUsd": 81.77,
       "leads": 31
     },
     {
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-22",
-      "spendUsd": 11.5,
-      "leads": 4
+      "spendUsd": 15.52,
+      "leads": 6
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-22",
-      "spendUsd": 31.83,
-      "leads": 13
+      "spendUsd": 64.48,
+      "leads": 23
     }
   ],
   "activeCampaigns": [
