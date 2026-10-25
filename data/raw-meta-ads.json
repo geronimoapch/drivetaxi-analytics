@@ -1131,15 +1131,15 @@
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-25",
-      "spendUsd": 9.37,
+      "spendUsd": 9.95,
       "leads": 1
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-25",
-      "spendUsd": 69.77,
-      "leads": 7
+      "spendUsd": 73.11,
+      "leads": 9
     }
   ],
   "activeCampaigns": [
