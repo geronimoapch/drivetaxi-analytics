@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-29T01:31:26.617Z",
+  "generatedAt": "2026-10-29T07:59:22.614Z",
   "channels": {
     "google": {
       "name": "Google Ads",
       "currency": "USD",
-      "dailyBudget": 20,
+      "dailyBudget": 30,
       "daily": [
         {
           "date": "2026-09-02",
@@ -144,7 +144,7 @@
         {
           "date": "2026-09-30",
           "spend": 18.255035,
-          "leads": 5.986259
+          "leads": 5.993321
         },
         {
           "date": "2026-10-01",
@@ -288,14 +288,14 @@
         },
         {
           "date": "2026-10-29",
-          "spend": 0.77,
-          "leads": 0
+          "spend": 5.11,
+          "leads": 0.992938
         }
       ],
       "categories": {
         "Аренда": {
           "name": "Аренда",
-          "dailyBudget": 20,
+          "dailyBudget": 30,
           "daily": [
             {
               "date": "2026-09-02",
@@ -435,7 +435,7 @@
             {
               "date": "2026-09-30",
               "spend": 18.255035,
-              "leads": 5.986259
+              "leads": 5.993321
             },
             {
               "date": "2026-10-01",
@@ -579,8 +579,8 @@
             },
             {
               "date": "2026-10-29",
-              "spend": 0.77,
-              "leads": 0
+              "spend": 5.11,
+              "leads": 0.992938
             }
           ]
         },
@@ -752,7 +752,7 @@
     "meta": {
       "name": "Meta Ads",
       "currency": "USD",
-      "dailyBudget": 80,
+      "dailyBudget": 110,
       "daily": [
         {
           "date": "2026-09-01",
@@ -1041,19 +1041,19 @@
         },
         {
           "date": "2026-10-28",
-          "spend": 90.13,
+          "spend": 90.27,
           "leads": 45
         },
         {
           "date": "2026-10-29",
-          "spend": 9.7,
-          "leads": 8
+          "spend": 33.980000000000004,
+          "leads": 13
         }
       ],
       "categories": {
         "Аренда": {
           "name": "Аренда",
-          "dailyBudget": 60,
+          "dailyBudget": 90,
           "daily": [
             {
               "date": "2026-09-01",
@@ -1342,13 +1342,13 @@
             },
             {
               "date": "2026-10-28",
-              "spend": 68.67,
+              "spend": 68.78,
               "leads": 38
             },
             {
               "date": "2026-10-29",
-              "spend": 7.13,
-              "leads": 6
+              "spend": 25.62,
+              "leads": 11
             }
           ]
         },
@@ -1709,12 +1709,12 @@
             },
             {
               "date": "2026-10-28",
-              "spend": 21.46,
+              "spend": 21.49,
               "leads": 7
             },
             {
               "date": "2026-10-29",
-              "spend": 2.57,
+              "spend": 8.36,
               "leads": 2
             }
           ]
