@@ -1194,29 +1194,29 @@
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-29",
-      "spendUsd": 71.8,
+      "spendUsd": 71.81,
       "leads": 26
     },
     {
       "campaignId": "120245785848080024",
       "campaignName": "Аренда - WhatsApp",
       "date": "2026-10-30",
-      "spendUsd": 21.13,
+      "spendUsd": 21.21,
       "leads": 2
     },
     {
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-30",
-      "spendUsd": 10.68,
+      "spendUsd": 15.59,
       "leads": 2
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-30",
-      "spendUsd": 58.77,
-      "leads": 18
+      "spendUsd": 78.34,
+      "leads": 25
     }
   ],
   "activeCampaigns": [
