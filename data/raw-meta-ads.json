@@ -1187,29 +1187,36 @@
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-29",
-      "spendUsd": 19.09,
+      "spendUsd": 19.1,
       "leads": 5
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-29",
-      "spendUsd": 71.61,
+      "spendUsd": 71.7,
       "leads": 26
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "date": "2026-10-30",
+      "spendUsd": 1.79,
+      "leads": 0
     },
     {
       "campaignId": "120252005126620024",
       "campaignName": "Подключашка - Лиды квиз",
       "date": "2026-10-30",
-      "spendUsd": 2.11,
+      "spendUsd": 5.81,
       "leads": 1
     },
     {
       "campaignId": "120252094114250024",
       "campaignName": "Аренда - Лиды квиз",
       "date": "2026-10-30",
-      "spendUsd": 6.8,
-      "leads": 3
+      "spendUsd": 30.4,
+      "leads": 11
     }
   ],
   "activeCampaigns": [
@@ -1224,8 +1231,14 @@
       "campaignName": "Подключашка - Лиды квиз",
       "effectiveStatus": "ACTIVE",
       "dailyBudgetUsd": 20
+    },
+    {
+      "campaignId": "120245785848080024",
+      "campaignName": "Аренда - WhatsApp",
+      "effectiveStatus": "ACTIVE",
+      "dailyBudgetUsd": 40
     }
   ],
-  "totalActiveDailyBudgetUsd": 110,
+  "totalActiveDailyBudgetUsd": 150,
   "skipped": false
 }
